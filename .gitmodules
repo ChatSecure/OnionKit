@@ -1,0 +1,3 @@
+[submodule "Submodules/iOS-OnionBrowser"]
+	path = Submodules/iOS-OnionBrowser
+	url = git@github.com:ChatSecure/iOS-OnionBrowser.git
