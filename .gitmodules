@@ -4,3 +4,6 @@
 [submodule "Submodules/CocoaAsyncSocket"]
 	path = Submodules/CocoaAsyncSocket
 	url = git@github.com:ChatSecure/CocoaAsyncSocket.git
+[submodule "Submodules/AFNetworking"]
+	path = Submodules/AFNetworking
+	url = git@github.com:ChatSecure/AFNetworking.git
