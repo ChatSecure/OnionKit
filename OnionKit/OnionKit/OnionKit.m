@@ -9,6 +9,7 @@
 #import "OnionKit.h"
 #include <Openssl/sha.h>
 #import "Bridge.h"
+#import "ProxyURLProtocol.h"
 
 @implementation OnionKit
 @synthesize
@@ -22,7 +23,7 @@ doPrepopulateBookmarks
 
 - (id) init {
     if (self = [super init]) {
-        // Detect
+        [NSURLProtocol registerClass:[ProxyURLProtocol class]];
         NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Settings.sqlite"];
         NSFileManager *fileManager = [NSFileManager defaultManager];
         doPrepopulateBookmarks = (![fileManager fileExistsAtPath:[storeURL path]]);
