@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		D962BB8B169AA59A0080E652 /* geoip in Resources */ = {isa = PBXBuildFile; fileRef = D962BB8A169AA59A0080E652 /* geoip */; };
+		D962BB93169AB0B20080E652 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D962BB92169AB0B20080E652 /* WebViewController.m */; };
+		D962BB9E169AB2F50080E652 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D962BB9A169AB2F40080E652 /* SettingsTableViewController.m */; };
+		D962BB9F169AB2F50080E652 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D962BB9C169AB2F40080E652 /* SettingsViewController.m */; };
+		D962BBA0169AB2F50080E652 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D962BB9D169AB2F40080E652 /* SettingsViewController.xib */; };
+		D962BBA7169AB6A50080E652 /* Bookmark.m in Sources */ = {isa = PBXBuildFile; fileRef = D962BBA2169AB6A40080E652 /* Bookmark.m */; };
+		D962BBA8169AB6A50080E652 /* BookmarkEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D962BBA4169AB6A50080E652 /* BookmarkEditViewController.m */; };
+		D962BBA9169AB6A50080E652 /* BookmarkTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D962BBA6169AB6A50080E652 /* BookmarkTableViewController.m */; };
+		D962BBAC169AB7580080E652 /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = D962BBAA169AB7580080E652 /* about.html */; };
+		D962BBAD169AB7580080E652 /* startup.html in Resources */ = {isa = PBXBuildFile; fileRef = D962BBAB169AB7580080E652 /* startup.html */; };
 		D9B86CFB1659FB7700E8C13B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B86CFA1659FB7700E8C13B /* UIKit.framework */; };
 		D9B86CFD1659FB7700E8C13B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B86CFC1659FB7700E8C13B /* Foundation.framework */; };
 		D9B86CFF1659FB7700E8C13B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B86CFE1659FB7700E8C13B /* CoreGraphics.framework */; };
@@ -79,6 +88,21 @@
 
 /* Begin PBXFileReference section */
 		D962BB8A169AA59A0080E652 /* geoip */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = geoip; path = "../Submodules/iOS-OnionBrowser/dependencies/share/geoip"; sourceTree = "<group>"; };
+		D962BB91169AB0B20080E652 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebViewController.h; path = "../Submodules/iOS-OnionBrowser/OnionBrowser/OnionBrowser/WebViewController.h"; sourceTree = "<group>"; };
+		D962BB92169AB0B20080E652 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewController.m; path = "../Submodules/iOS-OnionBrowser/OnionBrowser/OnionBrowser/WebViewController.m"; sourceTree = "<group>"; };
+		D962BB99169AB2F40080E652 /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsTableViewController.h; path = "../Submodules/iOS-OnionBrowser/OnionBrowser/OnionBrowser/SettingsTableViewController.h"; sourceTree = "<group>"; };
+		D962BB9A169AB2F40080E652 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsTableViewController.m; path = "../Submodules/iOS-OnionBrowser/OnionBrowser/OnionBrowser/SettingsTableViewController.m"; sourceTree = "<group>"; };
+		D962BB9B169AB2F40080E652 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = "../Submodules/iOS-OnionBrowser/OnionBrowser/OnionBrowser/SettingsViewController.h"; sourceTree = "<group>"; };
+		D962BB9C169AB2F40080E652 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = "../Submodules/iOS-OnionBrowser/OnionBrowser/OnionBrowser/SettingsViewController.m"; sourceTree = "<group>"; };
+		D962BB9D169AB2F40080E652 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingsViewController.xib; path = "../Submodules/iOS-OnionBrowser/OnionBrowser/OnionBrowser/SettingsViewController.xib"; sourceTree = "<group>"; };
+		D962BBA1169AB6A40080E652 /* Bookmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bookmark.h; path = "../Submodules/iOS-OnionBrowser/OnionBrowser/OnionBrowser/Bookmark.h"; sourceTree = "<group>"; };
+		D962BBA2169AB6A40080E652 /* Bookmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bookmark.m; path = "../Submodules/iOS-OnionBrowser/OnionBrowser/OnionBrowser/Bookmark.m"; sourceTree = "<group>"; };
+		D962BBA3169AB6A40080E652 /* BookmarkEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookmarkEditViewController.h; path = "../Submodules/iOS-OnionBrowser/OnionBrowser/OnionBrowser/BookmarkEditViewController.h"; sourceTree = "<group>"; };
+		D962BBA4169AB6A50080E652 /* BookmarkEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookmarkEditViewController.m; path = "../Submodules/iOS-OnionBrowser/OnionBrowser/OnionBrowser/BookmarkEditViewController.m"; sourceTree = "<group>"; };
+		D962BBA5169AB6A50080E652 /* BookmarkTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookmarkTableViewController.h; path = "../Submodules/iOS-OnionBrowser/OnionBrowser/OnionBrowser/BookmarkTableViewController.h"; sourceTree = "<group>"; };
+		D962BBA6169AB6A50080E652 /* BookmarkTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookmarkTableViewController.m; path = "../Submodules/iOS-OnionBrowser/OnionBrowser/OnionBrowser/BookmarkTableViewController.m"; sourceTree = "<group>"; };
+		D962BBAA169AB7580080E652 /* about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = about.html; path = "../Submodules/iOS-OnionBrowser/OnionBrowser/about.html"; sourceTree = "<group>"; };
+		D962BBAB169AB7580080E652 /* startup.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = startup.html; path = "../Submodules/iOS-OnionBrowser/OnionBrowser/startup.html"; sourceTree = "<group>"; };
 		D9B86CF61659FB7700E8C13B /* OnionKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnionKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B86CFA1659FB7700E8C13B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D9B86CFC1659FB7700E8C13B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -296,6 +320,19 @@
 		D9B86D2F1659FC4C00E8C13B /* OnionBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				D962BBAA169AB7580080E652 /* about.html */,
+				D962BBAB169AB7580080E652 /* startup.html */,
+				D962BBA1169AB6A40080E652 /* Bookmark.h */,
+				D962BBA2169AB6A40080E652 /* Bookmark.m */,
+				D962BBA3169AB6A40080E652 /* BookmarkEditViewController.h */,
+				D962BBA4169AB6A50080E652 /* BookmarkEditViewController.m */,
+				D962BBA5169AB6A50080E652 /* BookmarkTableViewController.h */,
+				D962BBA6169AB6A50080E652 /* BookmarkTableViewController.m */,
+				D962BB99169AB2F40080E652 /* SettingsTableViewController.h */,
+				D962BB9A169AB2F40080E652 /* SettingsTableViewController.m */,
+				D962BB9B169AB2F40080E652 /* SettingsViewController.h */,
+				D962BB9C169AB2F40080E652 /* SettingsViewController.m */,
+				D962BB9D169AB2F40080E652 /* SettingsViewController.xib */,
 				D9B86D4E1659FD5400E8C13B /* libs */,
 				D9B86D1F1659FC4600E8C13B /* NSData+CocoaDevUsersAdditions.h */,
 				D9B86D201659FC4600E8C13B /* NSData+CocoaDevUsersAdditions.m */,
@@ -321,6 +358,8 @@
 				D9B86D2C1659FC4600E8C13B /* TorWrapper.m */,
 				D9B86D2D1659FC4600E8C13B /* ULINetSocket.h */,
 				D9B86D2E1659FC4600E8C13B /* ULINetSocket.m */,
+				D962BB91169AB0B20080E652 /* WebViewController.h */,
+				D962BB92169AB0B20080E652 /* WebViewController.m */,
 				D9B86D1B1659FBEF00E8C13B /* ConnectionKit */,
 			);
 			name = OnionBrowser;
@@ -513,6 +552,9 @@
 				D9B86D111659FB7700E8C13B /* Default-568h@2x.png in Resources */,
 				D9EF72BB169A910D006ECF49 /* torrc in Resources */,
 				D962BB8B169AA59A0080E652 /* geoip in Resources */,
+				D962BBA0169AB2F50080E652 /* SettingsViewController.xib in Resources */,
+				D962BBAC169AB7580080E652 /* about.html in Resources */,
+				D962BBAD169AB7580080E652 /* startup.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,6 +607,12 @@
 				D9EF733E169A951A006ECF49 /* MagicalRecord+ShorthandSupport.m in Sources */,
 				D9EF733F169A951A006ECF49 /* MagicalRecord.m in Sources */,
 				D9EF7375169A9BB1006ECF49 /* Settings.xcdatamodeld in Sources */,
+				D962BB93169AB0B20080E652 /* WebViewController.m in Sources */,
+				D962BB9E169AB2F50080E652 /* SettingsTableViewController.m in Sources */,
+				D962BB9F169AB2F50080E652 /* SettingsViewController.m in Sources */,
+				D962BBA7169AB6A50080E652 /* Bookmark.m in Sources */,
+				D962BBA8169AB6A50080E652 /* BookmarkEditViewController.m in Sources */,
+				D962BBA9169AB6A50080E652 /* BookmarkTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

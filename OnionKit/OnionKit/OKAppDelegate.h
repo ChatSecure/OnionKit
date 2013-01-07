@@ -11,11 +11,13 @@
 
 #import <UIKit/UIKit.h>
 #import "OnionKit.h"
+#import "WebViewController.h"
 
 @interface OKAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (nonatomic, strong) OnionKit *onionKit;
 @property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, strong) WebViewController *webVC;
 
 
 @end

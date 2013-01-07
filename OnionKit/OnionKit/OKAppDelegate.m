@@ -15,15 +15,16 @@
 @implementation OKAppDelegate
 @synthesize window = _window;
 @synthesize onionKit = _onionKit;
+@synthesize webVC = _webVC;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [MagicalRecord setupAutoMigratingCoreDataStack];
+    [MagicalRecord setupCoreDataStackWithStoreNamed:@"Settings.sqlite"];
     _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     _onionKit = [OnionKit sharedInstance];
-    
-    UIViewController *vc = [[UIViewController alloc] init];
-    _window.rootViewController = vc;
+    _webVC = [[WebViewController alloc] init];
+
+    _window.rootViewController = _webVC;
     
     [_window makeKeyAndVisible];
     return YES;
