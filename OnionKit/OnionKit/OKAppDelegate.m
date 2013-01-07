@@ -32,9 +32,8 @@
 #pragma mark -
 #pragma mark App lifecycle
 
-
 - (void)applicationWillResignActive:(UIApplication *)application {
-    [[OnionKit sharedInstance].tor disableTorCheckLoop];
+    [_onionKit.tor disableTorCheckLoop];
 }
 
 - (void) applicationWillTerminate:(UIApplication *)application {
@@ -43,7 +42,7 @@
 
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    if (![OnionKit sharedInstance].tor.didFirstConnect) {
+    if (!_onionKit.tor.didFirstConnect) {
         // User is trying to quit app before we have finished initial
         // connection. This is basically an "abort" situation because
         // backgrounding while Tor is attempting to connect will almost
@@ -55,14 +54,14 @@
 #endif
         exit(0);
     } else {
-        [[OnionKit sharedInstance].tor disableTorCheckLoop];
+        [_onionKit.tor disableTorCheckLoop];
     }
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Don't want to call "activateTorCheckLoop" directly since we
     // want to HUP tor first.
-    [[OnionKit sharedInstance].tor appDidBecomeActive];
+    [_onionKit.tor appDidBecomeActive];
 }
 
 @end

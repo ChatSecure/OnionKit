@@ -22,16 +22,16 @@
 
 + (OnionKit *)sharedInstance;
 
-@property (strong, nonatomic) TorController *tor;
+@property (strong) TorController *tor;
 
 
-@property (nonatomic) Byte spoofUserAgent;
-@property (nonatomic) Byte dntHeader;
-@property (nonatomic) Boolean usePipelining;
+@property Byte spoofUserAgent;
+@property Byte dntHeader;
+@property Boolean usePipelining;
 
-@property (nonatomic) NSMutableArray *sslWhitelistedDomains; // for self-signed
+@property NSMutableArray *sslWhitelistedDomains; // for self-signed
 
-@property (nonatomic) Boolean doPrepopulateBookmarks;
+@property Boolean doPrepopulateBookmarks;
 
 - (void)updateTorrc;
 - (NSURL *)applicationDocumentsDirectory;
