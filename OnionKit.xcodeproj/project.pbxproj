@@ -102,11 +102,15 @@
 		D9B45276169ECB4A00A61221 /* libtor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B4517A169EC8BB00A61221 /* libtor.a */; };
 		D9B45278169ECB4A00A61221 /* OnionKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D9B4507A169EC57F00A61221 /* OnionKit.h */; };
 		D9B45280169ECC2900A61221 /* libOnionKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B45075169EC57F00A61221 /* libOnionKit.a */; };
-		D9B45283169ECCB600A61221 /* torrc in Resources */ = {isa = PBXBuildFile; fileRef = D9B451BC169EC8E800A61221 /* torrc */; };
-		D9B45285169ECCCE00A61221 /* geoip in Resources */ = {isa = PBXBuildFile; fileRef = D9B45284169ECCCE00A61221 /* geoip */; };
 		D9B45286169ECD5700A61221 /* Settings.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D9B451A8169EC8E800A61221 /* Settings.xcdatamodeld */; };
-		D9B45287169ECD7A00A61221 /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = D9B4518B169EC8E800A61221 /* about.html */; };
-		D9B45288169ECD7A00A61221 /* startup.html in Resources */ = {isa = PBXBuildFile; fileRef = D9B451B8169EC8E800A61221 /* startup.html */; };
+		D9B45289169ECED700A61221 /* torrc in CopyFiles */ = {isa = PBXBuildFile; fileRef = D9B451BC169EC8E800A61221 /* torrc */; };
+		D9B4528A169ECF0200A61221 /* about.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = D9B4518B169EC8E800A61221 /* about.html */; };
+		D9B4528B169ECF0200A61221 /* startup.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = D9B451B8169EC8E800A61221 /* startup.html */; };
+		D9B4528C169ECF1200A61221 /* geoip in CopyFiles */ = {isa = PBXBuildFile; fileRef = D9B45284169ECCCE00A61221 /* geoip */; };
+		D9B4528D169ECF4C00A61221 /* about.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = D9B4518B169EC8E800A61221 /* about.html */; };
+		D9B4528E169ECF4C00A61221 /* startup.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = D9B451B8169EC8E800A61221 /* startup.html */; };
+		D9B4528F169ECF5500A61221 /* torrc in CopyFiles */ = {isa = PBXBuildFile; fileRef = D9B451BC169EC8E800A61221 /* torrc */; };
+		D9B45290169ECF5E00A61221 /* geoip in CopyFiles */ = {isa = PBXBuildFile; fileRef = D9B45284169ECCCE00A61221 /* geoip */; };
 		D9B86CFB1659FB7700E8C13B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B86CFA1659FB7700E8C13B /* UIKit.framework */; };
 		D9B86CFD1659FB7700E8C13B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B86CFC1659FB7700E8C13B /* Foundation.framework */; };
 		D9B86CFF1659FB7700E8C13B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B86CFE1659FB7700E8C13B /* CoreGraphics.framework */; };
@@ -141,6 +145,10 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
+				D9B4528C169ECF1200A61221 /* geoip in CopyFiles */,
+				D9B4528A169ECF0200A61221 /* about.html in CopyFiles */,
+				D9B4528B169ECF0200A61221 /* startup.html in CopyFiles */,
+				D9B45289169ECED700A61221 /* torrc in CopyFiles */,
 				D9B4507B169EC57F00A61221 /* OnionKit.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,6 +159,10 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
+				D9B45290169ECF5E00A61221 /* geoip in CopyFiles */,
+				D9B4528F169ECF5500A61221 /* torrc in CopyFiles */,
+				D9B4528D169ECF4C00A61221 /* about.html in CopyFiles */,
+				D9B4528E169ECF4C00A61221 /* startup.html in CopyFiles */,
 				D9B45278169ECB4A00A61221 /* OnionKit.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1119,14 +1131,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9B45287169ECD7A00A61221 /* about.html in Resources */,
-				D9B45288169ECD7A00A61221 /* startup.html in Resources */,
 				D9B86D051659FB7700E8C13B /* InfoPlist.strings in Resources */,
 				D9B86D0D1659FB7700E8C13B /* Default.png in Resources */,
 				D9B86D0F1659FB7700E8C13B /* Default@2x.png in Resources */,
 				D9B86D111659FB7700E8C13B /* Default-568h@2x.png in Resources */,
-				D9B45283169ECCB600A61221 /* torrc in Resources */,
-				D9B45285169ECCCE00A61221 /* geoip in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
