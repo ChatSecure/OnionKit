@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D9B45076169EC57F00A61221 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B86CFC1659FB7700E8C13B /* Foundation.framework */; };
 		D9B4507B169EC57F00A61221 /* OnionKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D9B4507A169EC57F00A61221 /* OnionKit.h */; };
 		D9B4507D169EC57F00A61221 /* OnionKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B4507C169EC57F00A61221 /* OnionKit.m */; };
 		D9B4517F169EC8BB00A61221 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B45170169EC8BB00A61221 /* libcrypto.a */; };
@@ -30,7 +29,6 @@
 		D9B451CD169EC8E800A61221 /* Bridge.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B4519E169EC8E800A61221 /* Bridge.m */; };
 		D9B451CE169EC8E800A61221 /* BridgeEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B451A0169EC8E800A61221 /* BridgeEditViewController.m */; };
 		D9B451CF169EC8E800A61221 /* BridgeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B451A2169EC8E800A61221 /* BridgeTableViewController.m */; };
-		D9B451D0169EC8E800A61221 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B451A5169EC8E800A61221 /* main.m */; };
 		D9B451D1169EC8E800A61221 /* Settings.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D9B451A8169EC8E800A61221 /* Settings.xcdatamodeld */; };
 		D9B451D2169EC8E800A61221 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B451AB169EC8E800A61221 /* SettingsTableViewController.m */; };
 		D9B451D3169EC8E800A61221 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B451AD169EC8E800A61221 /* SettingsViewController.m */; };
@@ -77,7 +75,6 @@
 		D9B45242169ECB4A00A61221 /* Bridge.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B4519E169EC8E800A61221 /* Bridge.m */; };
 		D9B45243169ECB4A00A61221 /* BridgeEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B451A0169EC8E800A61221 /* BridgeEditViewController.m */; };
 		D9B45244169ECB4A00A61221 /* BridgeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B451A2169EC8E800A61221 /* BridgeTableViewController.m */; };
-		D9B45245169ECB4A00A61221 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B451A5169EC8E800A61221 /* main.m */; };
 		D9B45246169ECB4A00A61221 /* Settings.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D9B451A8169EC8E800A61221 /* Settings.xcdatamodeld */; };
 		D9B45247169ECB4A00A61221 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B451AB169EC8E800A61221 /* SettingsTableViewController.m */; };
 		D9B45248169ECB4A00A61221 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B451AD169EC8E800A61221 /* SettingsViewController.m */; };
@@ -88,18 +85,6 @@
 		D9B4524D169ECB4A00A61221 /* TorController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B451BB169EC8E800A61221 /* TorController.m */; };
 		D9B4524E169ECB4A00A61221 /* TorWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B451BE169EC8E800A61221 /* TorWrapper.m */; };
 		D9B4524F169ECB4A00A61221 /* ULINetSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B451C0169EC8E800A61221 /* ULINetSocket.m */; };
-		D9B4526B169ECB4A00A61221 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B86CFC1659FB7700E8C13B /* Foundation.framework */; };
-		D9B4526C169ECB4A00A61221 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B45170169EC8BB00A61221 /* libcrypto.a */; };
-		D9B4526D169ECB4A00A61221 /* libevent.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B45171169EC8BB00A61221 /* libevent.a */; };
-		D9B4526E169ECB4A00A61221 /* libevent_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B45172169EC8BB00A61221 /* libevent_core.a */; };
-		D9B4526F169ECB4A00A61221 /* libevent_extra.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B45173169EC8BB00A61221 /* libevent_extra.a */; };
-		D9B45270169ECB4A00A61221 /* libevent_openssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B45174169EC8BB00A61221 /* libevent_openssl.a */; };
-		D9B45271169ECB4A00A61221 /* libevent_pthreads.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B45175169EC8BB00A61221 /* libevent_pthreads.a */; };
-		D9B45272169ECB4A00A61221 /* libor-crypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B45176169EC8BB00A61221 /* libor-crypto.a */; };
-		D9B45273169ECB4A00A61221 /* libor-event.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B45177169EC8BB00A61221 /* libor-event.a */; };
-		D9B45274169ECB4A00A61221 /* libor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B45178169EC8BB00A61221 /* libor.a */; };
-		D9B45275169ECB4A00A61221 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B45179169EC8BB00A61221 /* libssl.a */; };
-		D9B45276169ECB4A00A61221 /* libtor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B4517A169EC8BB00A61221 /* libtor.a */; };
 		D9B45278169ECB4A00A61221 /* OnionKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D9B4507A169EC57F00A61221 /* OnionKit.h */; };
 		D9B45280169ECC2900A61221 /* libOnionKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B45075169EC57F00A61221 /* libOnionKit.a */; };
 		D9B45286169ECD5700A61221 /* Settings.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D9B451A8169EC8E800A61221 /* Settings.xcdatamodeld */; };
@@ -477,7 +462,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9B45076169EC57F00A61221 /* Foundation.framework in Frameworks */,
 				D9B4517F169EC8BB00A61221 /* libcrypto.a in Frameworks */,
 				D9B45180169EC8BB00A61221 /* libevent.a in Frameworks */,
 				D9B45181169EC8BB00A61221 /* libevent_core.a in Frameworks */,
@@ -496,18 +480,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9B4526B169ECB4A00A61221 /* Foundation.framework in Frameworks */,
-				D9B4526C169ECB4A00A61221 /* libcrypto.a in Frameworks */,
-				D9B4526D169ECB4A00A61221 /* libevent.a in Frameworks */,
-				D9B4526E169ECB4A00A61221 /* libevent_core.a in Frameworks */,
-				D9B4526F169ECB4A00A61221 /* libevent_extra.a in Frameworks */,
-				D9B45270169ECB4A00A61221 /* libevent_openssl.a in Frameworks */,
-				D9B45271169ECB4A00A61221 /* libevent_pthreads.a in Frameworks */,
-				D9B45272169ECB4A00A61221 /* libor-crypto.a in Frameworks */,
-				D9B45273169ECB4A00A61221 /* libor-event.a in Frameworks */,
-				D9B45274169ECB4A00A61221 /* libor.a in Frameworks */,
-				D9B45275169ECB4A00A61221 /* libssl.a in Frameworks */,
-				D9B45276169ECB4A00A61221 /* libtor.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1155,7 +1127,6 @@
 				D9B451CD169EC8E800A61221 /* Bridge.m in Sources */,
 				D9B451CE169EC8E800A61221 /* BridgeEditViewController.m in Sources */,
 				D9B451CF169EC8E800A61221 /* BridgeTableViewController.m in Sources */,
-				D9B451D0169EC8E800A61221 /* main.m in Sources */,
 				D9B451D1169EC8E800A61221 /* Settings.xcdatamodeld in Sources */,
 				D9B451D2169EC8E800A61221 /* SettingsTableViewController.m in Sources */,
 				D9B451D3169EC8E800A61221 /* SettingsViewController.m in Sources */,
@@ -1209,7 +1180,6 @@
 				D9B45242169ECB4A00A61221 /* Bridge.m in Sources */,
 				D9B45243169ECB4A00A61221 /* BridgeEditViewController.m in Sources */,
 				D9B45244169ECB4A00A61221 /* BridgeTableViewController.m in Sources */,
-				D9B45245169ECB4A00A61221 /* main.m in Sources */,
 				D9B45246169ECB4A00A61221 /* Settings.xcdatamodeld in Sources */,
 				D9B45247169ECB4A00A61221 /* SettingsTableViewController.m in Sources */,
 				D9B45248169ECB4A00A61221 /* SettingsViewController.m in Sources */,
