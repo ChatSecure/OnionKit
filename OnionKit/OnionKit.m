@@ -23,6 +23,7 @@ doPrepopulateBookmarks
 
 - (id) init {
     if (self = [super init]) {
+        [MagicalRecord setupCoreDataStack];
         [NSURLProtocol registerClass:[ProxyURLProtocol class]];
         NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Settings.sqlite"];
         NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -39,7 +40,7 @@ doPrepopulateBookmarks
         usePipelining = YES;
         
         // Start the spinner for the "connecting..." phase
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+        //[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
         
         /*******************/
         // Clear any previous caches/cookies
