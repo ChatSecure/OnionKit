@@ -7,7 +7,7 @@
 //
 
 #import "TORAppDelegate.h"
-#import "HITorManager.h"
+#import "TORRootViewController.h"
 
 @implementation TORAppDelegate
 
@@ -16,7 +16,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    [[HITorManager defaultManager] start];
+    self.window.rootViewController = [[TORRootViewController alloc] init];
     [self.window makeKeyAndVisible];
     return YES;
 }

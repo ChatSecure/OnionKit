@@ -44,6 +44,7 @@
 		D9C5D922183C16380012262D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C5D921183C16380012262D /* SystemConfiguration.framework */; };
 		D9C5D924183C16410012262D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C5D923183C16410012262D /* libz.dylib */; };
 		D9C5D926183C16A10012262D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C5D925183C16A10012262D /* MobileCoreServices.framework */; };
+		D9C5DA02183C1ABF0012262D /* TORRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C5DA01183C1ABF0012262D /* TORRootViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -518,6 +519,8 @@
 		D9C5D9FC183C17480012262D /* tor-resolve.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "tor-resolve.c"; sourceTree = "<group>"; };
 		D9C5D9FE183C17480012262D /* include.am */ = {isa = PBXFileReference; lastKnownFileType = text; path = include.am; sourceTree = "<group>"; };
 		D9C5D9FF183C17480012262D /* orconfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = orconfig.h; sourceTree = "<group>"; };
+		D9C5DA00183C1ABF0012262D /* TORRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TORRootViewController.h; sourceTree = "<group>"; };
+		D9C5DA01183C1ABF0012262D /* TORRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TORRootViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -649,6 +652,8 @@
 			children = (
 				D9C5D826183C14980012262D /* TORAppDelegate.h */,
 				D9C5D827183C14980012262D /* TORAppDelegate.m */,
+				D9C5DA00183C1ABF0012262D /* TORRootViewController.h */,
+				D9C5DA01183C1ABF0012262D /* TORRootViewController.m */,
 				D9C5D829183C14980012262D /* Images.xcassets */,
 				D9C5D81E183C14980012262D /* Supporting Files */,
 			);
@@ -1325,6 +1330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9C5DA02183C1ABF0012262D /* TORRootViewController.m in Sources */,
 				D9C5D828183C14980012262D /* TORAppDelegate.m in Sources */,
 				D9C5D824183C14980012262D /* main.m in Sources */,
 			);
