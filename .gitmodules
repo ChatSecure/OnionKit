@@ -1,12 +1,9 @@
 [submodule "Submodules/iOS-OnionBrowser"]
 	path = Submodules/iOS-OnionBrowser
-	url = git@github.com:ChatSecure/iOS-OnionBrowser.git
-[submodule "Submodules/CocoaAsyncSocket"]
-	path = Submodules/CocoaAsyncSocket
-	url = git@github.com:ChatSecure/CocoaAsyncSocket.git
-[submodule "Submodules/AFNetworking"]
-	path = Submodules/AFNetworking
-	url = git@github.com:ChatSecure/AFNetworking.git
-[submodule "Submodules/MagicalRecord"]
-	path = Submodules/MagicalRecord
-	url = git@github.com:ChatSecure/MagicalRecord.git
+	url = git@github.com:mtigas/iOS-OnionBrowser.git
+[submodule "Submodules/Tor"]
+	path = Submodules/Tor
+	url = git@github.com:ChatSecure/Tor.framework.git
+[submodule "Submodules/libtor"]
+	path = Submodules/libtor
+	url = git@github.com:ChatSecure/tor.git
