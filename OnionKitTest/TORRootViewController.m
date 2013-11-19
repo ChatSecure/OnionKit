@@ -9,7 +9,6 @@
 #import "TORRootViewController.h"
 #import "HITorManager.h"
 
-
 NSString * const kHITorManagerIsRunningKey = @"isRunning";
 NSString * const CONNECTING_STRING = @"Connecting to Tor...";
 NSString * const DISCONNECTING_STRING = @"Disconnecting from Tor...";
@@ -18,14 +17,17 @@ NSString * const CONNECTED_STRING = @"Connected to Tor!";
 NSString * const CONNECT_STRING = @"Connect";
 NSString * const DISCONNECT_STRING = @"Disconnect";
 NSString * const CANNOT_RECONNECT_STRING = @"Cannot Reconnect";
+NSString * const TEST_STRING = @"Test";
 
+NSString * const kTorCheckHost = @"check.torproject.org";
+uint16_t const kTorCheckPort = 443;
 
 @interface TORRootViewController ()
 
 @end
 
 @implementation TORRootViewController
-@synthesize connectionStatusLabel, activityIndicatorView, connectButton;
+@synthesize connectionStatusLabel, activityIndicatorView, connectButton, testButton;
 
 - (void) dealloc {
     [[HITorManager defaultManager] removeObserver:self forKeyPath:kHITorManagerIsRunningKey];
@@ -40,8 +42,19 @@ NSString * const CANNOT_RECONNECT_STRING = @"Cannot Reconnect";
         self.connectButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         [self.connectButton addTarget:self action:@selector(connectButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
         [[HITorManager defaultManager] addObserver:self forKeyPath:kHITorManagerIsRunningKey options:NSKeyValueObservingOptionNew context:NULL];
+        self.testButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        [self.testButton addTarget:self action:@selector(testButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     }
     return self;
+}
+
+- (void) testButtonPressed:(id)sender {
+    GCDAsyncSocket *socket = [[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:dispatch_get_main_queue()];
+    NSError *error = NULL;
+    [socket connectToHost:kTorCheckHost onPort:kTorCheckPort error:&error];
+    if (error) {
+        NSLog(@"Error connecting to host %@", error.userInfo);
+    }
 }
 
 - (void)viewDidLoad
@@ -50,23 +63,30 @@ NSString * const CANNOT_RECONNECT_STRING = @"Cannot Reconnect";
     [self.view addSubview:connectionStatusLabel];
     [self.view addSubview:activityIndicatorView];
     [self.view addSubview:connectButton];
+    [self.view addSubview:testButton];
+    
+    
+    // setup label and button titles
+    self.connectionStatusLabel.text = DISCONNECTED_STRING;
+    self.connectionStatusLabel.textColor = [UIColor redColor];
+    [self.connectButton setTitle:CONNECT_STRING forState:UIControlStateNormal];
+    [self.testButton setTitle:TEST_STRING forState:UIControlStateNormal];
 }
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+
+    
+    // setup frames
     CGFloat padding = 20.0f;
     self.connectionStatusLabel.frame = CGRectMake(padding, padding, 200, 30);
-    self.connectionStatusLabel.text = DISCONNECTED_STRING;
-    self.connectionStatusLabel.textColor = [UIColor redColor];
-    [self.connectButton setTitle:CONNECT_STRING forState:UIControlStateNormal];
     self.activityIndicatorView.frame = CGRectMake(connectionStatusLabel.frame.origin.x + connectionStatusLabel.frame.size.width + padding, padding, 30, 30);
     self.connectButton.frame = CGRectMake(padding, connectionStatusLabel.frame.origin.y + connectionStatusLabel.frame.size.height + padding, 150, 50);
+    CGRect testButtonFrame = self.connectButton.frame;
+    testButtonFrame.origin.y = self.connectButton.frame.origin.y + self.connectButton.frame.size.height + padding;
+    self.testButton.frame = testButtonFrame;
 }
 
-- (void) viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-
-}
 
 - (void) connectButtonPressed:(id)sender {
     [self.activityIndicatorView startAnimating];
@@ -111,6 +131,24 @@ NSString * const CANNOT_RECONNECT_STRING = @"Cannot Reconnect";
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark GCDAsyncSocketDelegate methods
+
+- (void) socket:(GCDAsyncSocket *)sock didConnectToHost:(NSString *)host port:(uint16_t)port {
+    NSLog(@"%@ connected to %@ on port %d", sock, host, port);
+}
+
+- (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err {
+    NSLog(@"socket %@ disconnected: %@", sock, err.userInfo);
+}
+
+- (void) socketDidSecure:(GCDAsyncSocket *)sock {
+    NSLog(@"socket secured: %@", sock);
+}
+
+- (void) socketDidCloseReadStream:(GCDAsyncSocket *)sock {
+    NSLog(@"socket closed readstream: %@", sock);
 }
 
 @end

@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GCDAsyncSocket.h"
 
-@interface TORRootViewController : UIViewController
+@interface TORRootViewController : UIViewController <GCDAsyncSocketDelegate>
 
 @property (nonatomic, strong) UILabel *connectionStatusLabel;
 @property (nonatomic, strong) UIActivityIndicatorView *activityIndicatorView;
 @property (nonatomic, strong) UIButton *connectButton;
+@property (nonatomic, strong) UIButton *testButton;
 
 @end
