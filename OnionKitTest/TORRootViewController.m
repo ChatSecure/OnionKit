@@ -24,7 +24,7 @@ NSString * const kTorCheckHost = @"check.torproject.org";
 uint16_t const kTorCheckPort = 443;
 
 @interface TORRootViewController ()
-
+@property (nonatomic, strong) GCDAsyncProxySocket *socket;
 @end
 
 @implementation TORRootViewController
@@ -50,10 +50,10 @@ uint16_t const kTorCheckPort = 443;
 }
 
 - (void) testButtonPressed:(id)sender {
-    GCDAsyncProxySocket *socket = [[GCDAsyncProxySocket alloc] initWithDelegate:self delegateQueue:dispatch_get_main_queue()];
-    [socket setProxyHost:@"127.0.0.1" port:9050 version:GCDAsyncSocketSOCKSVersion5];
+    self.socket = [[GCDAsyncProxySocket alloc] initWithDelegate:self delegateQueue:dispatch_get_main_queue()];
+    [self.socket setProxyHost:@"127.0.0.1" port:9050 version:GCDAsyncSocketSOCKSVersion5];
     NSError *error = NULL;
-    [socket connectToHost:kTorCheckHost onPort:kTorCheckPort error:&error];
+    [self.socket connectToHost:kTorCheckHost onPort:kTorCheckPort error:&error];
     if (error) {
         NSLog(@"Error connecting to host %@", error.userInfo);
     }
