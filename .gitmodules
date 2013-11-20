@@ -7,9 +7,6 @@
 [submodule "Submodules/libtor"]
 	path = Submodules/libtor
 	url = git@github.com:ChatSecure/tor.git
-[submodule "Submodules/AppProxyCap"]
-	path = Submodules/AppProxyCap
-	url = git@github.com:ChatSecure/AppProxyCap.git
 [submodule "Submodules/CocoaAsyncSocket"]
 	path = Submodules/CocoaAsyncSocket
 	url = git@github.com:ChatSecure/CocoaAsyncSocket.git

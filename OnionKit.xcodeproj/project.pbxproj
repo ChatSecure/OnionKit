@@ -1574,6 +1574,7 @@
 				D9C5D83E183C14990012262D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
