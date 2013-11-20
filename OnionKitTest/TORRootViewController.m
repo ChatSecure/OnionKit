@@ -8,6 +8,7 @@
 
 #import "TORRootViewController.h"
 #import "HITorManager.h"
+#import "GCDAsyncProxySocket.h"
 
 NSString * const kHITorManagerIsRunningKey = @"isRunning";
 NSString * const CONNECTING_STRING = @"Connecting to Tor...";
@@ -49,7 +50,7 @@ uint16_t const kTorCheckPort = 443;
 }
 
 - (void) testButtonPressed:(id)sender {
-    GCDAsyncSocket *socket = [[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:dispatch_get_main_queue()];
+    GCDAsyncProxySocket *socket = [[GCDAsyncProxySocket alloc] initWithDelegate:self delegateQueue:dispatch_get_main_queue()];
     [socket setProxyHost:@"127.0.0.1" port:9050 version:GCDAsyncSocketSOCKSVersion5];
     NSError *error = NULL;
     [socket connectToHost:kTorCheckHost onPort:kTorCheckPort error:&error];

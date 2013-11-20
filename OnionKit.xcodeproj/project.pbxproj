@@ -46,6 +46,7 @@
 		D9C5D926183C16A10012262D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C5D925183C16A10012262D /* MobileCoreServices.framework */; };
 		D9C5DA02183C1ABF0012262D /* TORRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C5DA01183C1ABF0012262D /* TORRootViewController.m */; };
 		D9C5DA05183C25000012262D /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C5DA04183C25000012262D /* GCDAsyncSocket.m */; };
+		D9D41914183CA1EC00B78A6C /* GCDAsyncProxySocket.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D41913183CA1EC00B78A6C /* GCDAsyncProxySocket.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -524,6 +525,8 @@
 		D9C5DA01183C1ABF0012262D /* TORRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TORRootViewController.m; sourceTree = "<group>"; };
 		D9C5DA03183C25000012262D /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = Submodules/CocoaAsyncSocket/GCD/GCDAsyncSocket.h; sourceTree = "<group>"; };
 		D9C5DA04183C25000012262D /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = Submodules/CocoaAsyncSocket/GCD/GCDAsyncSocket.m; sourceTree = "<group>"; };
+		D9D41912183CA1EC00B78A6C /* GCDAsyncProxySocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDAsyncProxySocket.h; path = Submodules/CocoaAsyncSocket/GCD/GCDAsyncProxySocket.h; sourceTree = "<group>"; };
+		D9D41913183CA1EC00B78A6C /* GCDAsyncProxySocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncProxySocket.m; path = Submodules/CocoaAsyncSocket/GCD/GCDAsyncProxySocket.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1234,6 +1237,8 @@
 		D9C5DA06183C25030012262D /* CocoaAsyncSocket */ = {
 			isa = PBXGroup;
 			children = (
+				D9D41912183CA1EC00B78A6C /* GCDAsyncProxySocket.h */,
+				D9D41913183CA1EC00B78A6C /* GCDAsyncProxySocket.m */,
 				D9C5DA03183C25000012262D /* GCDAsyncSocket.h */,
 				D9C5DA04183C25000012262D /* GCDAsyncSocket.m */,
 			);
@@ -1353,6 +1358,7 @@
 			files = (
 				D9C5DA05183C25000012262D /* GCDAsyncSocket.m in Sources */,
 				D9C5DA02183C1ABF0012262D /* TORRootViewController.m in Sources */,
+				D9D41914183CA1EC00B78A6C /* GCDAsyncProxySocket.m in Sources */,
 				D9C5D828183C14980012262D /* TORAppDelegate.m in Sources */,
 				D9C5D824183C14980012262D /* main.m in Sources */,
 			);
