@@ -20,8 +20,8 @@ NSString * const DISCONNECT_STRING = @"Disconnect";
 NSString * const CANNOT_RECONNECT_STRING = @"Cannot Reconnect";
 NSString * const TEST_STRING = @"Test";
 
-NSString * const kTorCheckHost = @"wtfismyip.com";
-uint16_t const kTorCheckPort = 80;
+NSString * const kTorCheckHost = @"check.torproject.org";
+uint16_t const kTorCheckPort = 443;
 
 @interface TORRootViewController ()
 @property (nonatomic, strong) GCDAsyncProxySocket *socket;
@@ -138,11 +138,7 @@ uint16_t const kTorCheckPort = 80;
 
 - (void) socket:(GCDAsyncSocket *)sock didConnectToHost:(NSString *)host port:(uint16_t)port {
     NSLog(@"%@ connected to %@ on port %d", sock, host, port);
-    //[sock startTLS:nil];
-    NSString *requestString = [NSString stringWithFormat:@"GET /json HTTP/1.1\r\nhost: %@\r\n\r\n", kTorCheckHost];
-    NSData *data = [requestString dataUsingEncoding:NSUTF8StringEncoding];
-    [sock readDataWithTimeout:-1 tag:1];
-    [sock writeData:data withTimeout:-1 tag:0];
+    [sock startTLS:nil];
 }
 
 - (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err {
@@ -151,7 +147,10 @@ uint16_t const kTorCheckPort = 80;
 
 - (void) socketDidSecure:(GCDAsyncSocket *)sock {
     NSLog(@"socket secured: %@", sock);
-
+    NSString *requestString = [NSString stringWithFormat:@"GET /json HTTP/1.1\r\nhost: %@\r\n\r\n", kTorCheckHost];
+    NSData *data = [requestString dataUsingEncoding:NSUTF8StringEncoding];
+    [sock readDataWithTimeout:-1 tag:1];
+    [sock writeData:data withTimeout:-1 tag:0];
 }
 
 - (void) socketDidCloseReadStream:(GCDAsyncSocket *)sock {
