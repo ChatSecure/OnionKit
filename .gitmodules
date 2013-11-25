@@ -1,6 +1,3 @@
-[submodule "Submodules/iOS-OnionBrowser"]
-	path = Submodules/iOS-OnionBrowser
-	url = git@github.com:mtigas/iOS-OnionBrowser.git
 [submodule "Submodules/Tor"]
 	path = Submodules/Tor
 	url = git@github.com:ChatSecure/Tor.framework.git

@@ -12,12 +12,10 @@ This will clone all of the required dependencies into the Submodules directory.
 
 ## Build
 
-Build OpenSSL and libevent static libaries for iOS.
+Build OpenSSL, libevent and libtor static libaries for iOS.
 
-    $ cd Submodules/iOS-OnionBrowser/
     $ bash build-libssl.sh
     $ bash build-libevent.sh
-    $ cd ../../
     $ bash build-tor.sh
 
 ## Usage

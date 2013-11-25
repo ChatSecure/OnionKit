@@ -35,8 +35,7 @@ MINIOSVERSION="6.0"
 
 # No need to change this since xcode build will only compile in the
 # necessary bits from the libraries we create
-#ARCHS="i386 x86_64 armv7 armv7s arm64"
-ARCHS="i386"
+ARCHS="i386 x86_64 armv7 armv7s arm64"
 
 DEVELOPER=`xcode-select -print-path`
 #DEVELOPER="/Applications/Xcode.app/Contents/Developer"
@@ -45,8 +44,7 @@ cd "`dirname \"$0\"`"
 REPOROOT=$(pwd)
 
 # Where we'll end up storing things in the end
-ONION_BROWSER_REPO="${REPOROOT}/Submodules/iOS-OnionBrowser"
-OUTPUTDIR="${ONION_BROWSER_REPO}/dependencies"
+OUTPUTDIR="${REPOROOT}/dependencies"
 mkdir -p ${OUTPUTDIR}/include
 mkdir -p ${OUTPUTDIR}/lib
 
