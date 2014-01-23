@@ -1,6 +1,6 @@
 # OnionKit for iOS
 
-Objective-C Tor Wrapper Framework for iOS. **Don't actually use this yet.** This project is based on iOS-OnionBrowser and Tor.framework.
+Objective-C Tor Wrapper Framework for iOS. **Don't actually use this yet.** This project is based on [iOS-OnionBrowser](https://github.com/mtigas/iOS-OnionBrowser) and [Tor.framework](https://github.com/hivewallet/Tor.framework).
 
 To clone:
 
@@ -22,8 +22,5 @@ Build OpenSSL, libevent and libtor static libaries for iOS.
 
 To include in a standard project:
 
-1. Drag the `OnionKit.xcodeproj` file into your project files.
-2. Go to your target's Build Phases tab
-3. Add `OnionKit` as a Target Dependency
-4. Add `libOnionKit.a` to your "Link Binary with Libraries" step.
-	a. Include the libraries found in `OnionKit/Submodules/iOS-OnionBrowser/dependencies/lib`.
+1. Drag the `./dependencies/lib` folder into your project and make sure the static libs are added to your target.
+2. In "Search Headers" for your target make to to include `$(SRCROOT)/Submodules/OnionKit/dependencies/include` or something similar.
