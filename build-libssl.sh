@@ -22,8 +22,8 @@
 ###########################################################################
 #  Choose your openssl version and your currently-installed iOS SDK version:
 #
-VERSION="1.0.1e"
-SDKVERSION="7.0"
+VERSION="1.0.1f"
+SDKVERSION="7.1"
 MINIOSVERSION="6.0"
 VERIFYGPG=true
 
@@ -35,7 +35,7 @@ VERIFYGPG=true
 
 # No need to change this since xcode build will only compile in the
 # necessary bits from the libraries we create
-ARCHS="i386 x86_64 armv7 armv7s arm64"
+ARCHS="i386 x86_64 armv7 armv7s" # arm64 doesn't compile with 7.1 SDK
 
 DEVELOPER=`xcode-select -print-path`
 #DEVELOPER="/Applications/Xcode.app/Contents/Developer"

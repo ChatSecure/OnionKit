@@ -22,9 +22,10 @@
 ###########################################################################
 #  Choose your tor version and your currently-installed iOS SDK version:
 #
-VERSION="0.2.4.18-rc"
+VERSION="0.2.4.21"
+TOR_GIT_TAG="tor-${VERSION}-chatsecure"
 #VERSION="0.2.5.1-alpha"
-SDKVERSION="7.0"
+SDKVERSION="7.1"
 MINIOSVERSION="6.0"
 
 ###########################################################################
@@ -35,7 +36,7 @@ MINIOSVERSION="6.0"
 
 # No need to change this since xcode build will only compile in the
 # necessary bits from the libraries we create
-ARCHS="i386 x86_64 armv7 armv7s arm64"
+ARCHS="i386 x86_64 armv7 armv7s" # Disable arm64 on iOS 7.1 SDK
 
 DEVELOPER=`xcode-select -print-path`
 #DEVELOPER="/Applications/Xcode.app/Contents/Developer"
@@ -69,15 +70,12 @@ LIBTOR_GIT_REPO="${REPOROOT}/Submodules/libtor"
 
 rm -fr "${SRCDIR}/tor-${VERSION}"
 cd "${LIBTOR_GIT_REPO}"
-git checkout tor_main_hack
+git checkout ${TOR_GIT_TAG}
 if [ ! -f "${LIBTOR_GIT_REPO}/configure" ]; then
     bash autogen.sh
 fi
 cp -R "${LIBTOR_GIT_REPO}" "${SRCDIR}/tor-${VERSION}"
 cd "${SRCDIR}/tor-${VERSION}"
-
-
-
 
 #####
 # Collect libz.dylib from the iPhoneSimulator.sdk and iPhoneOS.sdk (already contains armv6 and armv7)
