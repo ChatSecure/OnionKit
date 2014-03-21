@@ -25,7 +25,7 @@
 VERSION="2.0.21-stable"
 SDKVERSION="7.1"
 MINIOSVERSION="6.0"
-VERIFYGPG=true # cross-certify issue w/key. http://www.gnupg.org/faq/subkey-cross-certify.html
+VERIFYGPG=true
 
 ###########################################################################
 #
@@ -35,10 +35,17 @@ VERIFYGPG=true # cross-certify issue w/key. http://www.gnupg.org/faq/subkey-cros
 
 # No need to change this since xcode build will only compile in the
 # necessary bits from the libraries we create
-ARCHS="i386 x86_64 armv7 armv7s" # arm64 builds are broken in the 7.1 SDK
+ARCHS="i386 x86_64 armv7 armv7s arm64"
 
 DEVELOPER=`xcode-select -print-path`
 #DEVELOPER="/Applications/Xcode.app/Contents/Developer"
+
+if [ "$1" == "--noverify" ]; then
+  VERIFYGPG=false
+fi
+if [ "$2" == "--i386only" ]; then
+  ARCHS="i386"
+fi
 
 cd "`dirname \"$0\"`"
 REPOROOT=$(pwd)
@@ -118,7 +125,7 @@ do
 
 	mkdir -p "${INTERDIR}/${PLATFORM}${SDKVERSION}-${ARCH}.sdk"
 
-	export PATH="${DEVELOPER}/Platforms/${PLATFORM}.platform/Developer/usr/bin/:${DEVELOPER}/Toolchains/XcodeDefault.xct‌​oolchain/usr/bin:${DEVELOPER}/usr/bin:${ORIGINALPATH}"
+	export PATH="${DEVELOPER}/Toolchains/XcodeDefault.xct‌​oolchain/usr/bin:${DEVELOPER}/usr/bin:${ORIGINALPATH}"
 	export CC="${CCACHE}`which gcc` -arch ${ARCH} -miphoneos-version-min=${MINIOSVERSION}"
 
 	./configure --disable-shared --enable-static --disable-debug-mode ${EXTRA_CONFIG} \
