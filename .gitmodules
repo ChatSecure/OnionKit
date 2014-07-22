@@ -1,9 +1,3 @@
-[submodule "Submodules/Tor"]
-	path = Submodules/Tor
-	url = git@github.com:ChatSecure/Tor.framework.git
 [submodule "Submodules/libtor"]
 	path = Submodules/libtor
 	url = git@github.com:ChatSecure/tor.git
-[submodule "Submodules/CocoaAsyncSocket"]
-	path = Submodules/CocoaAsyncSocket
-	url = git@github.com:ChatSecure/CocoaAsyncSocket.git
