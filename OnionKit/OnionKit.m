@@ -28,6 +28,7 @@ const char tor_git_revision[] =
 #import "or/networkstatus.h"
 #import "or/cpuworker.h"
 #import "event2/event.h"
+#include <openssl/crypto.h>
 
 // avoid including "or/connection.h" because included file "or/buffers.h" conflicts with iOS headers
 void connection_bucket_init(void);
@@ -322,6 +323,22 @@ NSString * const kOnionKitStoppedNotification = @"kOnionKitStoppedNotification";
 
     tor_cleanup();
     [NSThread exit];
+}
+
++(NSString *) opensslVersion
+{
+    return [NSString stringWithUTF8String:SSLeay_version(SSLEAY_VERSION)];
+}
+
++(NSString *) libeventVersion
+{
+    return [NSString stringWithUTF8String:event_get_version()];
+}
+
++(NSString *) torVersion
+{
+    //get_short_version()
+    return [NSString stringWithUTF8String:get_version()];
 }
 
 @end

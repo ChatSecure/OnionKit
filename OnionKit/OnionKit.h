@@ -38,4 +38,10 @@ extern NSString * const kOnionKitStoppedNotification; //<< Notification informin
 /** Stops tor proxy server */
 - (void)stop;
 
++(NSString *) opensslVersion;
+
++(NSString *) libeventVersion;
+
++(NSString *) torVersion;
+
 @end
