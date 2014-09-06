@@ -1,0 +1,14 @@
+PODS:
+  - OnionKit (1.0.0)
+
+DEPENDENCIES:
+  - OnionKit (from `./OnionKit.podspec`)
+
+EXTERNAL SOURCES:
+  OnionKit:
+    :path: ./OnionKit.podspec
+
+SPEC CHECKSUMS:
+  OnionKit: 6ff12d1994f5b2d8cc4943436114d751ebca2f08
+
+COCOAPODS: 0.33.1

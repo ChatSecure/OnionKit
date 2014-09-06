@@ -1,0 +1,10 @@
+language: objective-c
+
+install:
+  - bash build-libssl.sh --noverify --i386only
+  - bash build-libevent.sh --noverify --i386only
+  - bash build-tor.sh --noverify --i386only
+  - pod install
+
+script:
+  - xctool -workspace OnionKit.xcworkspace -scheme OnionKitTestsiOS -sdk iphonesimulator7.1 -arch i386 test

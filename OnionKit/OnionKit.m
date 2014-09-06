@@ -9,13 +9,10 @@
 
 #import "OnionKit.h"
 
-const char tor_git_revision[] =
-#ifndef _MSC_VER
-#include "micro-revision.i"
-#endif
-"";
+const char tor_git_revision[] = "";
 
 #define MAIN_PRIVATE
+#define USE_BUFFEREVENTS
 
 #import "or/or.h"
 #import "or/dns.h"
@@ -28,7 +25,7 @@ const char tor_git_revision[] =
 #import "or/networkstatus.h"
 #import "or/cpuworker.h"
 #import "event2/event.h"
-#include <openssl/crypto.h>
+#import "openssl/crypto.h"
 
 // avoid including "or/connection.h" because included file "or/buffers.h" conflicts with iOS headers
 void connection_bucket_init(void);

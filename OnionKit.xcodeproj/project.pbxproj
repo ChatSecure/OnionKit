@@ -7,72 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D9B02A8D18441991002CC51E /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B02A8118441991002CC51E /* libcrypto.a */; };
-		D9B02A8E18441991002CC51E /* libcurve25519_donna.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B02A8218441991002CC51E /* libcurve25519_donna.a */; };
-		D9B02A8F18441991002CC51E /* libevent_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B02A8318441991002CC51E /* libevent_core.a */; };
-		D9B02A9018441991002CC51E /* libevent_extra.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B02A8418441991002CC51E /* libevent_extra.a */; };
-		D9B02A9118441991002CC51E /* libevent_openssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B02A8518441991002CC51E /* libevent_openssl.a */; };
-		D9B02A9218441991002CC51E /* libevent_pthreads.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B02A8618441991002CC51E /* libevent_pthreads.a */; };
-		D9B02A9318441991002CC51E /* libevent.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B02A8718441991002CC51E /* libevent.a */; };
-		D9B02A9418441991002CC51E /* libor-crypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B02A8818441991002CC51E /* libor-crypto.a */; };
-		D9B02A9518441991002CC51E /* libor-event.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B02A8918441991002CC51E /* libor-event.a */; };
-		D9B02A9618441991002CC51E /* libor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B02A8A18441991002CC51E /* libor.a */; };
-		D9B02A9718441991002CC51E /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B02A8B18441991002CC51E /* libssl.a */; };
-		D9B02A9818441991002CC51E /* libtor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B02A8C18441991002CC51E /* libtor.a */; };
-		D9C5D6B6183BEFEC0012262D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C5D6B5183BEFEC0012262D /* Foundation.framework */; };
-		D9C5D6BB183BEFEC0012262D /* OnionKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D9C5D6BA183BEFEC0012262D /* OnionKit.h */; };
-		D9C5D6BD183BEFEC0012262D /* OnionKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C5D6BC183BEFEC0012262D /* OnionKit.m */; };
-		D9C5D6E9183BF6630012262D /* HITorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C5D6E6183BF6630012262D /* HITorManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D9C5D6EA183BF6630012262D /* HITorURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C5D6E8183BF6630012262D /* HITorURLProtocol.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D9C5D6FF183BF68E0012262D /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C5D6EC183BF68E0012262D /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D9C5D700183BF68E0012262D /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C5D6EF183BF68E0012262D /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D9C5D701183BF68E0012262D /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C5D6F1183BF68E0012262D /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D9C5D702183BF68E0012262D /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C5D6F3183BF68E0012262D /* ASIDownloadCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D9C5D703183BF68E0012262D /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C5D6F5183BF68E0012262D /* ASIFormDataRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D9C5D704183BF68E0012262D /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C5D6F7183BF68E0012262D /* ASIHTTPRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D9C5D705183BF68E0012262D /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C5D6FB183BF68E0012262D /* ASIInputStream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D9C5D706183BF68E0012262D /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C5D6FD183BF68E0012262D /* ASINetworkQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D9C5D70A183BF6CA0012262D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C5D709183BF6CA0012262D /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D9C5D819183C14980012262D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C5D6B5183BEFEC0012262D /* Foundation.framework */; };
-		D9C5D81B183C14980012262D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C5D81A183C14980012262D /* CoreGraphics.framework */; };
-		D9C5D81C183C14980012262D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C5D6C6183BEFEC0012262D /* UIKit.framework */; };
-		D9C5D822183C14980012262D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D9C5D820183C14980012262D /* InfoPlist.strings */; };
-		D9C5D824183C14980012262D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C5D823183C14980012262D /* main.m */; };
-		D9C5D828183C14980012262D /* TORAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C5D827183C14980012262D /* TORAppDelegate.m */; };
-		D9C5D82A183C14980012262D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9C5D829183C14980012262D /* Images.xcassets */; };
-		D9C5D845183C152A0012262D /* libOnionKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C5D6B2183BEFEC0012262D /* libOnionKit.a */; };
-		D9C5D922183C16380012262D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C5D921183C16380012262D /* SystemConfiguration.framework */; };
-		D9C5D924183C16410012262D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C5D923183C16410012262D /* libz.dylib */; };
-		D9C5D926183C16A10012262D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C5D925183C16A10012262D /* MobileCoreServices.framework */; };
-		D9C5DA02183C1ABF0012262D /* TORRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C5DA01183C1ABF0012262D /* TORRootViewController.m */; };
-		D9C5DA05183C25000012262D /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C5DA04183C25000012262D /* GCDAsyncSocket.m */; };
-		D9D41914183CA1EC00B78A6C /* GCDAsyncProxySocket.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D41913183CA1EC00B78A6C /* GCDAsyncProxySocket.m */; };
+		A19C1E70FDCB4B0081E31D2A /* libPods-OnionKitTestsiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 798590313DD5465EA9638C8B /* libPods-OnionKitTestsiOS.a */; };
+		D9C582E619BA803200B812EE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C5D6C3183BEFEC0012262D /* XCTest.framework */; };
+		D9C582E719BA803200B812EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C5D6B5183BEFEC0012262D /* Foundation.framework */; };
+		D9C582E819BA803200B812EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C5D6C6183BEFEC0012262D /* UIKit.framework */; };
+		D9C582EE19BA803200B812EE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D9C582EC19BA803200B812EE /* InfoPlist.strings */; };
+		D9C582F019BA803200B812EE /* OnionKitTestsiOS.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C582EF19BA803200B812EE /* OnionKitTestsiOS.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		D9C5D843183C15270012262D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D9C5D6AA183BEFEC0012262D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D9C5D6B1183BEFEC0012262D;
-			remoteInfo = OnionKit;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		D9C5D6B0183BEFEC0012262D /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-				D9C5D6BB183BEFEC0012262D /* OnionKit.h in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		528752B7645C4D1882C4E727 /* Pods-OnionKitTestsiOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnionKitTestsiOS.xcconfig"; path = "Pods/Pods-OnionKitTestsiOS.xcconfig"; sourceTree = "<group>"; };
+		798590313DD5465EA9638C8B /* libPods-OnionKitTestsiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OnionKitTestsiOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B02A8118441991002CC51E /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = dependencies/lib/libcrypto.a; sourceTree = SOURCE_ROOT; };
 		D9B02A8218441991002CC51E /* libcurve25519_donna.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurve25519_donna.a; path = dependencies/lib/libcurve25519_donna.a; sourceTree = SOURCE_ROOT; };
 		D9B02A8318441991002CC51E /* libevent_core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libevent_core.a; path = dependencies/lib/libevent_core.a; sourceTree = SOURCE_ROOT; };
@@ -268,48 +213,15 @@
 		D9B02B53184419A3002CC51E /* tor-fw-helper-upnp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tor-fw-helper-upnp.h"; sourceTree = "<group>"; };
 		D9B02B54184419A3002CC51E /* tor-fw-helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tor-fw-helper.h"; sourceTree = "<group>"; };
 		D9B02B55184419A3002CC51E /* tor_queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tor_queue.h; sourceTree = "<group>"; };
-		D9C5D6B2183BEFEC0012262D /* libOnionKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnionKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9C582E519BA803200B812EE /* OnionKitTestsiOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnionKitTestsiOS.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9C582EB19BA803200B812EE /* OnionKitTestsiOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OnionKitTestsiOS-Info.plist"; sourceTree = "<group>"; };
+		D9C582ED19BA803200B812EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D9C582EF19BA803200B812EE /* OnionKitTestsiOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OnionKitTestsiOS.m; sourceTree = "<group>"; };
+		D9C582F119BA803200B812EE /* OnionKitTestsiOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OnionKitTestsiOS-Prefix.pch"; sourceTree = "<group>"; };
 		D9C5D6B5183BEFEC0012262D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D9C5D6B9183BEFEC0012262D /* OnionKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OnionKit-Prefix.pch"; sourceTree = "<group>"; };
-		D9C5D6BA183BEFEC0012262D /* OnionKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OnionKit.h; sourceTree = "<group>"; };
-		D9C5D6BC183BEFEC0012262D /* OnionKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OnionKit.m; sourceTree = "<group>"; };
 		D9C5D6C3183BEFEC0012262D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D9C5D6C6183BEFEC0012262D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		D9C5D6E5183BF6630012262D /* HITorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HITorManager.h; path = Submodules/Tor/Tor/HITorManager.h; sourceTree = SOURCE_ROOT; };
-		D9C5D6E6183BF6630012262D /* HITorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HITorManager.m; path = Submodules/Tor/Tor/HITorManager.m; sourceTree = SOURCE_ROOT; };
-		D9C5D6E7183BF6630012262D /* HITorURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HITorURLProtocol.h; path = Submodules/Tor/Tor/HITorURLProtocol.h; sourceTree = SOURCE_ROOT; };
-		D9C5D6E8183BF6630012262D /* HITorURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HITorURLProtocol.m; path = Submodules/Tor/Tor/HITorURLProtocol.m; sourceTree = SOURCE_ROOT; };
-		D9C5D6EB183BF68E0012262D /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIAuthenticationDialog.h; path = Submodules/Tor/ASIHTTPRequest/Classes/ASIAuthenticationDialog.h; sourceTree = "<group>"; };
-		D9C5D6EC183BF68E0012262D /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIAuthenticationDialog.m; path = Submodules/Tor/ASIHTTPRequest/Classes/ASIAuthenticationDialog.m; sourceTree = "<group>"; };
-		D9C5D6ED183BF68E0012262D /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASICacheDelegate.h; path = Submodules/Tor/ASIHTTPRequest/Classes/ASICacheDelegate.h; sourceTree = "<group>"; };
-		D9C5D6EE183BF68E0012262D /* ASIDataCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIDataCompressor.h; path = Submodules/Tor/ASIHTTPRequest/Classes/ASIDataCompressor.h; sourceTree = "<group>"; };
-		D9C5D6EF183BF68E0012262D /* ASIDataCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIDataCompressor.m; path = Submodules/Tor/ASIHTTPRequest/Classes/ASIDataCompressor.m; sourceTree = "<group>"; };
-		D9C5D6F0183BF68E0012262D /* ASIDataDecompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIDataDecompressor.h; path = Submodules/Tor/ASIHTTPRequest/Classes/ASIDataDecompressor.h; sourceTree = "<group>"; };
-		D9C5D6F1183BF68E0012262D /* ASIDataDecompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIDataDecompressor.m; path = Submodules/Tor/ASIHTTPRequest/Classes/ASIDataDecompressor.m; sourceTree = "<group>"; };
-		D9C5D6F2183BF68E0012262D /* ASIDownloadCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIDownloadCache.h; path = Submodules/Tor/ASIHTTPRequest/Classes/ASIDownloadCache.h; sourceTree = "<group>"; };
-		D9C5D6F3183BF68E0012262D /* ASIDownloadCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIDownloadCache.m; path = Submodules/Tor/ASIHTTPRequest/Classes/ASIDownloadCache.m; sourceTree = "<group>"; };
-		D9C5D6F4183BF68E0012262D /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIFormDataRequest.h; path = Submodules/Tor/ASIHTTPRequest/Classes/ASIFormDataRequest.h; sourceTree = "<group>"; };
-		D9C5D6F5183BF68E0012262D /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIFormDataRequest.m; path = Submodules/Tor/ASIHTTPRequest/Classes/ASIFormDataRequest.m; sourceTree = "<group>"; };
-		D9C5D6F6183BF68E0012262D /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequest.h; path = Submodules/Tor/ASIHTTPRequest/Classes/ASIHTTPRequest.h; sourceTree = "<group>"; };
-		D9C5D6F7183BF68E0012262D /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIHTTPRequest.m; path = Submodules/Tor/ASIHTTPRequest/Classes/ASIHTTPRequest.m; sourceTree = "<group>"; };
-		D9C5D6F8183BF68E0012262D /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequestConfig.h; path = Submodules/Tor/ASIHTTPRequest/Classes/ASIHTTPRequestConfig.h; sourceTree = "<group>"; };
-		D9C5D6F9183BF68E0012262D /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequestDelegate.h; path = Submodules/Tor/ASIHTTPRequest/Classes/ASIHTTPRequestDelegate.h; sourceTree = "<group>"; };
-		D9C5D6FA183BF68E0012262D /* ASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIInputStream.h; path = Submodules/Tor/ASIHTTPRequest/Classes/ASIInputStream.h; sourceTree = "<group>"; };
-		D9C5D6FB183BF68E0012262D /* ASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIInputStream.m; path = Submodules/Tor/ASIHTTPRequest/Classes/ASIInputStream.m; sourceTree = "<group>"; };
-		D9C5D6FC183BF68E0012262D /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASINetworkQueue.h; path = Submodules/Tor/ASIHTTPRequest/Classes/ASINetworkQueue.h; sourceTree = "<group>"; };
-		D9C5D6FD183BF68E0012262D /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASINetworkQueue.m; path = Submodules/Tor/ASIHTTPRequest/Classes/ASINetworkQueue.m; sourceTree = "<group>"; };
-		D9C5D6FE183BF68E0012262D /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIProgressDelegate.h; path = Submodules/Tor/ASIHTTPRequest/Classes/ASIProgressDelegate.h; sourceTree = "<group>"; };
-		D9C5D708183BF6CA0012262D /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = Submodules/Tor/ASIHTTPRequest/External/Reachability/Reachability.h; sourceTree = "<group>"; };
-		D9C5D709183BF6CA0012262D /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = Submodules/Tor/ASIHTTPRequest/External/Reachability/Reachability.m; sourceTree = "<group>"; };
-		D9C5D818183C14980012262D /* OnionKitTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnionKitTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9C5D81A183C14980012262D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		D9C5D81F183C14980012262D /* OnionKitTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OnionKitTest-Info.plist"; sourceTree = "<group>"; };
-		D9C5D821183C14980012262D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D9C5D823183C14980012262D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D9C5D825183C14980012262D /* OnionKitTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OnionKitTest-Prefix.pch"; sourceTree = "<group>"; };
-		D9C5D826183C14980012262D /* TORAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TORAppDelegate.h; sourceTree = "<group>"; };
-		D9C5D827183C14980012262D /* TORAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TORAppDelegate.m; sourceTree = "<group>"; };
-		D9C5D829183C14980012262D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D9C5D911183C157B0012262D /* geoip */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = geoip; sourceTree = "<group>"; };
 		D9C5D921183C16380012262D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D9C5D923183C16410012262D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -521,46 +433,17 @@
 		D9C5D9FC183C17480012262D /* tor-resolve.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "tor-resolve.c"; sourceTree = "<group>"; };
 		D9C5D9FE183C17480012262D /* include.am */ = {isa = PBXFileReference; lastKnownFileType = text; path = include.am; sourceTree = "<group>"; };
 		D9C5D9FF183C17480012262D /* orconfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = orconfig.h; sourceTree = "<group>"; };
-		D9C5DA00183C1ABF0012262D /* TORRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TORRootViewController.h; sourceTree = "<group>"; };
-		D9C5DA01183C1ABF0012262D /* TORRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TORRootViewController.m; sourceTree = "<group>"; };
-		D9C5DA03183C25000012262D /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = Submodules/CocoaAsyncSocket/GCD/GCDAsyncSocket.h; sourceTree = "<group>"; };
-		D9C5DA04183C25000012262D /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = Submodules/CocoaAsyncSocket/GCD/GCDAsyncSocket.m; sourceTree = "<group>"; };
-		D9D41912183CA1EC00B78A6C /* GCDAsyncProxySocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDAsyncProxySocket.h; path = Submodules/CocoaAsyncSocket/GCD/GCDAsyncProxySocket.h; sourceTree = "<group>"; };
-		D9D41913183CA1EC00B78A6C /* GCDAsyncProxySocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncProxySocket.m; path = Submodules/CocoaAsyncSocket/GCD/GCDAsyncProxySocket.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D9C5D6AF183BEFEC0012262D /* Frameworks */ = {
+		D9C582E219BA803200B812EE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9B02A9618441991002CC51E /* libor.a in Frameworks */,
-				D9B02A8D18441991002CC51E /* libcrypto.a in Frameworks */,
-				D9B02A8E18441991002CC51E /* libcurve25519_donna.a in Frameworks */,
-				D9B02A9318441991002CC51E /* libevent.a in Frameworks */,
-				D9B02A9218441991002CC51E /* libevent_pthreads.a in Frameworks */,
-				D9C5D6B6183BEFEC0012262D /* Foundation.framework in Frameworks */,
-				D9B02A8F18441991002CC51E /* libevent_core.a in Frameworks */,
-				D9B02A9018441991002CC51E /* libevent_extra.a in Frameworks */,
-				D9B02A9718441991002CC51E /* libssl.a in Frameworks */,
-				D9B02A9518441991002CC51E /* libor-event.a in Frameworks */,
-				D9B02A9118441991002CC51E /* libevent_openssl.a in Frameworks */,
-				D9B02A9818441991002CC51E /* libtor.a in Frameworks */,
-				D9B02A9418441991002CC51E /* libor-crypto.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D9C5D815183C14980012262D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D9C5D926183C16A10012262D /* MobileCoreServices.framework in Frameworks */,
-				D9C5D924183C16410012262D /* libz.dylib in Frameworks */,
-				D9C5D922183C16380012262D /* SystemConfiguration.framework in Frameworks */,
-				D9C5D845183C152A0012262D /* libOnionKit.a in Frameworks */,
-				D9C5D81B183C14980012262D /* CoreGraphics.framework in Frameworks */,
-				D9C5D81C183C14980012262D /* UIKit.framework in Frameworks */,
-				D9C5D819183C14980012262D /* Foundation.framework in Frameworks */,
+				D9C582E619BA803200B812EE /* XCTest.framework in Frameworks */,
+				D9C582E819BA803200B812EE /* UIKit.framework in Frameworks */,
+				D9C582E719BA803200B812EE /* Foundation.framework in Frameworks */,
+				A19C1E70FDCB4B0081E31D2A /* libPods-OnionKitTestsiOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -798,22 +681,40 @@
 			path = tools;
 			sourceTree = "<group>";
 		};
+		D9C582E919BA803200B812EE /* OnionKitTestsiOS */ = {
+			isa = PBXGroup;
+			children = (
+				D9C582EF19BA803200B812EE /* OnionKitTestsiOS.m */,
+				D9C582EA19BA803200B812EE /* Supporting Files */,
+			);
+			path = OnionKitTestsiOS;
+			sourceTree = "<group>";
+		};
+		D9C582EA19BA803200B812EE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D9C582EB19BA803200B812EE /* OnionKitTestsiOS-Info.plist */,
+				D9C582EC19BA803200B812EE /* InfoPlist.strings */,
+				D9C582F119BA803200B812EE /* OnionKitTestsiOS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		D9C5D6A9183BEFEC0012262D = {
 			isa = PBXGroup;
 			children = (
 				D9C5DA07183C250F0012262D /* Submodules */,
-				D9C5D6B7183BEFEC0012262D /* OnionKit */,
-				D9C5D81D183C14980012262D /* OnionKitTest */,
+				D9C582E919BA803200B812EE /* OnionKitTestsiOS */,
 				D9C5D6B4183BEFEC0012262D /* Frameworks */,
 				D9C5D6B3183BEFEC0012262D /* Products */,
+				528752B7645C4D1882C4E727 /* Pods-OnionKitTestsiOS.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
 		D9C5D6B3183BEFEC0012262D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D9C5D6B2183BEFEC0012262D /* libOnionKit.a */,
-				D9C5D818183C14980012262D /* OnionKitTest.app */,
+				D9C582E519BA803200B812EE /* OnionKitTestsiOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -828,83 +729,9 @@
 				D9C5D6C3183BEFEC0012262D /* XCTest.framework */,
 				D9C5D6C6183BEFEC0012262D /* UIKit.framework */,
 				D9C5D81A183C14980012262D /* CoreGraphics.framework */,
+				798590313DD5465EA9638C8B /* libPods-OnionKitTestsiOS.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D9C5D6B7183BEFEC0012262D /* OnionKit */ = {
-			isa = PBXGroup;
-			children = (
-				D9C5D6E5183BF6630012262D /* HITorManager.h */,
-				D9C5D6E6183BF6630012262D /* HITorManager.m */,
-				D9C5D6E7183BF6630012262D /* HITorURLProtocol.h */,
-				D9C5D6E8183BF6630012262D /* HITorURLProtocol.m */,
-				D9C5D6BA183BEFEC0012262D /* OnionKit.h */,
-				D9C5D6BC183BEFEC0012262D /* OnionKit.m */,
-				D9C5D6B8183BEFEC0012262D /* Supporting Files */,
-			);
-			path = OnionKit;
-			sourceTree = "<group>";
-		};
-		D9C5D6B8183BEFEC0012262D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D9C5D6B9183BEFEC0012262D /* OnionKit-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		D9C5D707183BF6930012262D /* ASIHTTPRequest */ = {
-			isa = PBXGroup;
-			children = (
-				D9C5D708183BF6CA0012262D /* Reachability.h */,
-				D9C5D709183BF6CA0012262D /* Reachability.m */,
-				D9C5D6EB183BF68E0012262D /* ASIAuthenticationDialog.h */,
-				D9C5D6EC183BF68E0012262D /* ASIAuthenticationDialog.m */,
-				D9C5D6ED183BF68E0012262D /* ASICacheDelegate.h */,
-				D9C5D6EE183BF68E0012262D /* ASIDataCompressor.h */,
-				D9C5D6EF183BF68E0012262D /* ASIDataCompressor.m */,
-				D9C5D6F0183BF68E0012262D /* ASIDataDecompressor.h */,
-				D9C5D6F1183BF68E0012262D /* ASIDataDecompressor.m */,
-				D9C5D6F2183BF68E0012262D /* ASIDownloadCache.h */,
-				D9C5D6F3183BF68E0012262D /* ASIDownloadCache.m */,
-				D9C5D6F4183BF68E0012262D /* ASIFormDataRequest.h */,
-				D9C5D6F5183BF68E0012262D /* ASIFormDataRequest.m */,
-				D9C5D6F6183BF68E0012262D /* ASIHTTPRequest.h */,
-				D9C5D6F7183BF68E0012262D /* ASIHTTPRequest.m */,
-				D9C5D6F8183BF68E0012262D /* ASIHTTPRequestConfig.h */,
-				D9C5D6F9183BF68E0012262D /* ASIHTTPRequestDelegate.h */,
-				D9C5D6FA183BF68E0012262D /* ASIInputStream.h */,
-				D9C5D6FB183BF68E0012262D /* ASIInputStream.m */,
-				D9C5D6FC183BF68E0012262D /* ASINetworkQueue.h */,
-				D9C5D6FD183BF68E0012262D /* ASINetworkQueue.m */,
-				D9C5D6FE183BF68E0012262D /* ASIProgressDelegate.h */,
-			);
-			name = ASIHTTPRequest;
-			sourceTree = "<group>";
-		};
-		D9C5D81D183C14980012262D /* OnionKitTest */ = {
-			isa = PBXGroup;
-			children = (
-				D9C5D826183C14980012262D /* TORAppDelegate.h */,
-				D9C5D827183C14980012262D /* TORAppDelegate.m */,
-				D9C5DA00183C1ABF0012262D /* TORRootViewController.h */,
-				D9C5DA01183C1ABF0012262D /* TORRootViewController.m */,
-				D9C5D829183C14980012262D /* Images.xcassets */,
-				D9C5D81E183C14980012262D /* Supporting Files */,
-			);
-			path = OnionKitTest;
-			sourceTree = "<group>";
-		};
-		D9C5D81E183C14980012262D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D9C5D81F183C14980012262D /* OnionKitTest-Info.plist */,
-				D9C5D820183C14980012262D /* InfoPlist.strings */,
-				D9C5D823183C14980012262D /* main.m */,
-				D9C5D825183C14980012262D /* OnionKitTest-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		D9C5D903183C157B0012262D /* lib */ = {
@@ -1234,23 +1061,10 @@
 			path = win32;
 			sourceTree = "<group>";
 		};
-		D9C5DA06183C25030012262D /* CocoaAsyncSocket */ = {
-			isa = PBXGroup;
-			children = (
-				D9D41912183CA1EC00B78A6C /* GCDAsyncProxySocket.h */,
-				D9D41913183CA1EC00B78A6C /* GCDAsyncProxySocket.m */,
-				D9C5DA03183C25000012262D /* GCDAsyncSocket.h */,
-				D9C5DA04183C25000012262D /* GCDAsyncSocket.m */,
-			);
-			name = CocoaAsyncSocket;
-			sourceTree = "<group>";
-		};
 		D9C5DA07183C250F0012262D /* Submodules */ = {
 			isa = PBXGroup;
 			children = (
-				D9C5DA06183C25030012262D /* CocoaAsyncSocket */,
 				D9C5D920183C158D0012262D /* libtor */,
-				D9C5D707183BF6930012262D /* ASIHTTPRequest */,
 			);
 			name = Submodules;
 			sourceTree = "<group>";
@@ -1258,40 +1072,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D9C5D6B1183BEFEC0012262D /* OnionKit */ = {
+		D9C582E419BA803200B812EE /* OnionKitTestsiOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D9C5D6D5183BEFEC0012262D /* Build configuration list for PBXNativeTarget "OnionKit" */;
+			buildConfigurationList = D9C582F219BA803200B812EE /* Build configuration list for PBXNativeTarget "OnionKitTestsiOS" */;
 			buildPhases = (
-				D9C5D6AE183BEFEC0012262D /* Sources */,
-				D9C5D6AF183BEFEC0012262D /* Frameworks */,
-				D9C5D6B0183BEFEC0012262D /* CopyFiles */,
+				39EAFB468F014B2C8ECA47B8 /* Check Pods Manifest.lock */,
+				D9C582E119BA803200B812EE /* Sources */,
+				D9C582E219BA803200B812EE /* Frameworks */,
+				D9C582E319BA803200B812EE /* Resources */,
+				0D53E5D4C3D74AAF909F7971 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = OnionKit;
-			productName = OnionKit;
-			productReference = D9C5D6B2183BEFEC0012262D /* libOnionKit.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		D9C5D817183C14980012262D /* OnionKitTest */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D9C5D841183C14990012262D /* Build configuration list for PBXNativeTarget "OnionKitTest" */;
-			buildPhases = (
-				D9C5D814183C14980012262D /* Sources */,
-				D9C5D815183C14980012262D /* Frameworks */,
-				D9C5D816183C14980012262D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D9C5D844183C15270012262D /* PBXTargetDependency */,
-			);
-			name = OnionKitTest;
-			productName = OnionKitTest;
-			productReference = D9C5D818183C14980012262D /* OnionKitTest.app */;
-			productType = "com.apple.product-type.application";
+			name = OnionKitTestsiOS;
+			productName = OnionKitTestsiOS;
+			productReference = D9C582E519BA803200B812EE /* OnionKitTestsiOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -1314,71 +1112,71 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D9C5D6B1183BEFEC0012262D /* OnionKit */,
-				D9C5D817183C14980012262D /* OnionKitTest */,
+				D9C582E419BA803200B812EE /* OnionKitTestsiOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D9C5D816183C14980012262D /* Resources */ = {
+		D9C582E319BA803200B812EE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9C5D822183C14980012262D /* InfoPlist.strings in Resources */,
-				D9C5D82A183C14980012262D /* Images.xcassets in Resources */,
+				D9C582EE19BA803200B812EE /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXSourcesBuildPhase section */
-		D9C5D6AE183BEFEC0012262D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+/* Begin PBXShellScriptBuildPhase section */
+		0D53E5D4C3D74AAF909F7971 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9C5D700183BF68E0012262D /* ASIDataCompressor.m in Sources */,
-				D9C5D6EA183BF6630012262D /* HITorURLProtocol.m in Sources */,
-				D9C5D704183BF68E0012262D /* ASIHTTPRequest.m in Sources */,
-				D9C5D6FF183BF68E0012262D /* ASIAuthenticationDialog.m in Sources */,
-				D9C5D703183BF68E0012262D /* ASIFormDataRequest.m in Sources */,
-				D9C5D6E9183BF6630012262D /* HITorManager.m in Sources */,
-				D9C5D705183BF68E0012262D /* ASIInputStream.m in Sources */,
-				D9C5D6BD183BEFEC0012262D /* OnionKit.m in Sources */,
-				D9C5D706183BF68E0012262D /* ASINetworkQueue.m in Sources */,
-				D9C5D701183BF68E0012262D /* ASIDataDecompressor.m in Sources */,
-				D9C5D70A183BF6CA0012262D /* Reachability.m in Sources */,
-				D9C5D702183BF68E0012262D /* ASIDownloadCache.m in Sources */,
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-OnionKitTestsiOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
-		D9C5D814183C14980012262D /* Sources */ = {
+		39EAFB468F014B2C8ECA47B8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D9C582E119BA803200B812EE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9C5DA05183C25000012262D /* GCDAsyncSocket.m in Sources */,
-				D9C5DA02183C1ABF0012262D /* TORRootViewController.m in Sources */,
-				D9D41914183CA1EC00B78A6C /* GCDAsyncProxySocket.m in Sources */,
-				D9C5D828183C14980012262D /* TORAppDelegate.m in Sources */,
-				D9C5D824183C14980012262D /* main.m in Sources */,
+				D9C582F019BA803200B812EE /* OnionKitTestsiOS.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		D9C5D844183C15270012262D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D9C5D6B1183BEFEC0012262D /* OnionKit */;
-			targetProxy = D9C5D843183C15270012262D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		D9C5D820183C14980012262D /* InfoPlist.strings */ = {
+		D9C582EC19BA803200B812EE /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D9C5D821183C14980012262D /* en */,
+				D9C582ED19BA803200B812EE /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1386,11 +1184,52 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D9C582F319BA803200B812EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 528752B7645C4D1882C4E727 /* Pods-OnionKitTestsiOS.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OnionKitTestsiOS/OnionKitTestsiOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "OnionKitTestsiOS/OnionKitTestsiOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		D9C582F419BA803200B812EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 528752B7645C4D1882C4E727 /* Pods-OnionKitTestsiOS.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OnionKitTestsiOS/OnionKitTestsiOS-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "OnionKitTestsiOS/OnionKitTestsiOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 		D9C5D6D3183BEFEC0012262D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1428,7 +1267,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1456,114 +1294,23 @@
 			};
 			name = Release;
 		};
-		D9C5D6D6183BEFEC0012262D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DSTROOT = /tmp/OnionKit.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "OnionKit/OnionKit-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(SRCROOT)/dependencies/include",
-					"$(SRCROOT)/dependencies/include/common",
-				);
-				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/dependencies/lib";
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		D9C5D6D7183BEFEC0012262D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DSTROOT = /tmp/OnionKit.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "OnionKit/OnionKit-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(SRCROOT)/dependencies/include",
-					"$(SRCROOT)/dependencies/include/common",
-				);
-				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/dependencies/lib";
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		D9C5D83D183C14990012262D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "OnionKitTest/OnionKitTest-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "OnionKitTest/OnionKitTest-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		D9C5D83E183C14990012262D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "OnionKitTest/OnionKitTest-Prefix.pch";
-				INFOPLIST_FILE = "OnionKitTest/OnionKitTest-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D9C582F219BA803200B812EE /* Build configuration list for PBXNativeTarget "OnionKitTestsiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9C582F319BA803200B812EE /* Debug */,
+				D9C582F419BA803200B812EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D9C5D6AD183BEFEC0012262D /* Build configuration list for PBXProject "OnionKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D9C5D6D3183BEFEC0012262D /* Debug */,
 				D9C5D6D4183BEFEC0012262D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D9C5D6D5183BEFEC0012262D /* Build configuration list for PBXNativeTarget "OnionKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D9C5D6D6183BEFEC0012262D /* Debug */,
-				D9C5D6D7183BEFEC0012262D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D9C5D841183C14990012262D /* Build configuration list for PBXNativeTarget "OnionKitTest" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D9C5D83D183C14990012262D /* Debug */,
-				D9C5D83E183C14990012262D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

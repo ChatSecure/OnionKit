@@ -1,4 +1,5 @@
-# OnionKit for iOS
+# [OnionKit](https://github.com/chatsecure/onionkit)
+[![Build Status](https://travis-ci.org/ChatSecure/OnionKit.svg)](https://travis-ci.org/ChatSecure/OnionKit)
 
 Objective-C Tor Wrapper Framework for iOS. **Don't actually use this yet.** This project is based on [iOS-OnionBrowser](https://github.com/mtigas/iOS-OnionBrowser) and [Tor.framework](https://github.com/hivewallet/Tor.framework).
 
@@ -16,11 +17,12 @@ Build OpenSSL, libevent and libtor static libaries for iOS.
 
     $ bash build-libssl.sh
     $ bash build-libevent.sh
-    $ bash build-tor.sh
+    $ bash build-libtor.sh
 
 ## Usage
 
-To include in a standard project:
+Although I haven't submitted the podspec yet, you can try to use `OnionKit.podspec` in the meantime.
 
-1. Drag the `./dependencies/lib` folder into your project and make sure the static libs are added to your target.
-2. In "Search Headers" for your target make to to include `$(SRCROOT)/Submodules/OnionKit/dependencies/include` or something similar.
+## License
+
+The code for this project is dual licensed under the [LGPLv2.1+](https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt) and [MPL 2.0](http://www.mozilla.org/MPL/2.0/). The required dependencies are under terms of seperate licenses. More information is available in the [LICENSE](https://github.com/ChatSecure/OnionKit/blob/master/LICENSE) file.
