@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ./OnionKit.podspec
 
 SPEC CHECKSUMS:
-  OnionKit: 6ff12d1994f5b2d8cc4943436114d751ebca2f08
+  OnionKit: afe51510e5ea0652503540d465b7eada7ef4b21f
 
 COCOAPODS: 0.33.1

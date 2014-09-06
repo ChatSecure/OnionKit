@@ -11,12 +11,12 @@ Pod::Spec.new do |s|
     bash build-all.sh
   CMD
 
-  s.header_mappings_dir = 'dependencies/include'
   s.platform     = :ios, "6.0"
   s.source_files = "OnionKit/*.{h,m}", "dependencies/include/**/*.h"
-  s.preserve_paths  = "dependencies/libs/*", "dependencies/include/**/*.h"
+  s.xcconfig = { 'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/Headers/OnionKit"'}
+  s.preserve_paths = "dependencies/include/**/*.h"
+  s.header_mappings_dir = "dependencies/include"
   s.vendored_libraries  = "dependencies/lib/*.a"
-  s.xcconfig = { 'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/Headers/OnionKit"' }
   s.library     = 'crypto', 'curve25519_donna', 'event_core', 'event_extra', 'event_openssl',
                   'event_pthreads', 'event', 'or-crypto', 'or-event', 'or', 'ssl', 'tor', 'z'
   s.requires_arc = true
