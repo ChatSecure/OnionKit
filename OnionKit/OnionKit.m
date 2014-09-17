@@ -36,31 +36,25 @@ void connection_bucket_init(void);
 NSString * const kOnionKitStartedNotification = @"kOnionKitStartedNotification";
 NSString * const kOnionKitStoppedNotification = @"kOnionKitStoppedNotification";
 
-
 @interface OnionKit ()
-{
-    NSTimer *_startupTimer;
-    NSDate  *_startupDate;
-}
-@property (nonatomic, readonly) NSThread *torThread;
+@property (nonatomic, strong) NSTimer *startupTimer;
+@property (nonatomic, strong) NSDate  *startupDate;
+@property (nonatomic, strong) NSThread *torThread;
+@property (nonatomic, readwrite) BOOL isRunning;
 
-- (void)runTor:(NSThread *)obj;
+- (void)runTor;
 - (void)startupCheck:(NSTimer *)timer;
 @end
 
 @implementation OnionKit
-@synthesize port = _port;
-@synthesize dataDirectoryURL = _dataDirectoryURL;
 
 + (OnionKit *)sharedInstance
 {
     static OnionKit *_defaultManager = nil;
     static dispatch_once_t oncePredicate;
-    if (!_defaultManager)
-        dispatch_once(&oncePredicate, ^{
-            _defaultManager = [[self alloc] init];
-        });
-    
+    dispatch_once(&oncePredicate, ^{
+        _defaultManager = [[self alloc] init];
+    });
     return _defaultManager;
 }
 
@@ -69,10 +63,9 @@ NSString * const kOnionKitStoppedNotification = @"kOnionKitStoppedNotification";
     self = [super init];
     if (self)
     {
-        _port = 9050;
+        self.port = 9050;
         NSURL *appSupportURL = [[[[NSFileManager defaultManager] URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask] lastObject] URLByAppendingPathComponent:@"com.Hive.Tor"];
         self.dataDirectoryURL = appSupportURL;
-        
     }
     
     return self;
@@ -80,30 +73,28 @@ NSString * const kOnionKitStoppedNotification = @"kOnionKitStoppedNotification";
 
 - (void)start
 {
-    if (_torThread)
+    if (self.torThread)
         return;
     
-    _torThread = [[NSThread alloc] initWithTarget:self selector:@selector(runTor:) object:nil];
-    [_torThread start];
+    self.torThread = [[NSThread alloc] initWithTarget:self selector:@selector(runTor) object:nil];
+    [self.torThread start];
     
-    _startupDate = [[NSDate alloc] initWithTimeIntervalSinceNow:0];
-    _startupTimer = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(startupCheck:) userInfo:nil repeats:YES];
+    self.startupDate = [[NSDate alloc] initWithTimeIntervalSinceNow:0];
+    self.startupTimer = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(startupCheck:) userInfo:nil repeats:YES];
 }
 
 - (void)startupCheck:(NSTimer *)timer
 {
     if (can_complete_circuit)
     {
-        [_startupTimer invalidate];
-        _startupTimer = nil;
-        [self willChangeValueForKey:@"isRunning"];
-        _isRunning = YES;
-        [self didChangeValueForKey:@"isRunning"];
+        [self.startupTimer invalidate];
+        self.startupTimer = nil;
+        self.isRunning = YES;
         [[NSNotificationCenter defaultCenter] postNotificationName:kOnionKitStartedNotification object:self];
     }
     else
     {
-        if ([[NSDate dateWithTimeIntervalSinceNow:0] timeIntervalSinceDate:_startupDate] > 300)
+        if ([[NSDate dateWithTimeIntervalSinceNow:0] timeIntervalSinceDate:self.startupDate] > 300)
         {
             // Ok it's time to close down, we won't start
             [self stop];
@@ -113,52 +104,46 @@ NSString * const kOnionKitStoppedNotification = @"kOnionKitStoppedNotification";
 
 - (void)stop
 {
-    if (!_torThread)
+    if (!self.torThread)
         return;
 
-    [_startupTimer invalidate];
-    _startupTimer = nil;    
-    [_torThread cancel];
+    [self.startupTimer invalidate];
+    self.startupTimer = nil;
+    [self.torThread cancel];
     event_base_loopexit(tor_libevent_get_base(), NULL);
-    while (![_torThread isFinished])
+    while (![self.torThread isFinished])
     {
         usleep(100);
     }
-    _torThread = nil;
+    self.torThread = nil;
     
-    [self willChangeValueForKey:@"isRunning"];
-    _isRunning = NO;
-    [self didChangeValueForKey:@"isRunning"];
+    self.isRunning = NO;
     [[NSNotificationCenter defaultCenter] postNotificationName:kOnionKitStoppedNotification object:self];
 }
 
 
 - (void)dealloc
 {
-    [_startupTimer invalidate];
+    [self.startupTimer invalidate];
     [self stop];
 }
 
-- (void)runTor:(NSThread *)obj
+- (void)runTor
 {
-    [[NSFileManager defaultManager] createDirectoryAtURL:_dataDirectoryURL withIntermediateDirectories:YES attributes:0 error:NULL];
+    [[NSFileManager defaultManager] createDirectoryAtURL:self.dataDirectoryURL withIntermediateDirectories:YES attributes:0 error:NULL];
     // Configure basics
     char *argv[8];
-    int argc = 3;
+    int argc = 5;
     argv[0] = "torkit";
     argv[1] = "SOCKSPort";
-    argv[2] = (char *)[[NSString stringWithFormat:@"%lu", (unsigned long)_port] UTF8String];
+    argv[2] = (char *)[[NSString stringWithFormat:@"%lu", (unsigned long)self.port] UTF8String];
     argv[3] = "DataDirectory";
-    argv[4] = (char *)[_dataDirectoryURL.path UTF8String];
-//#ifdef DEBUG
+    argv[4] = (char *)[self.dataDirectoryURL.path UTF8String];
+#ifdef DEBUG
     argc = 7;
     argv[5] = "DisableDebuggerAttachment";
     argv[6] = "0";
-//#else
-//    argc = 4;
-//    argv[3] = "--quiet";
-//#endif //DEBUG
-    
+#endif
     
     update_approx_time(time(NULL));
     tor_threads_init();
@@ -166,7 +151,7 @@ NSString * const kOnionKitStoppedNotification = @"kOnionKitStoppedNotification";
 
     // Main loop here
 
-    if (tor_init(argc, argv)<0)
+    if (tor_init(argc, argv) < 0)
     {
         [NSThread exit];
         return;
@@ -320,24 +305,22 @@ NSString * const kOnionKitStoppedNotification = @"kOnionKitStoppedNotification";
         }
     }
 
-
     tor_cleanup();
     [NSThread exit];
 }
 
-+(NSString *) opensslVersion
++ (NSString *) opensslVersion
 {
     return [NSString stringWithUTF8String:SSLeay_version(SSLEAY_VERSION)];
 }
 
-+(NSString *) libeventVersion
++ (NSString *) libeventVersion
 {
     return [NSString stringWithUTF8String:event_get_version()];
 }
 
-+(NSString *) torVersion
++ (NSString *) torVersion
 {
-    //get_short_version()
     return [NSString stringWithUTF8String:get_version()];
 }
 

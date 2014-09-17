@@ -9,18 +9,20 @@
 
 #import <Foundation/Foundation.h>
 
-/** Real Tor Manager. Allows you to start and stop tor proxy server that
+/** 
+ *  Real Tor Manager. Allows you to start and stop tor proxy server that
  *  allows you to route your network via tor.
  */
-
-extern NSString * const kOnionKitStartedNotification; //<< Notification informing that the tor manager has started
-extern NSString * const kOnionKitStoppedNotification; //<< Notification informing that the tor manager has stopped
-
 @interface OnionKit : NSObject
 
-@property (nonatomic, assign) NSUInteger port;                                       //<< Sets a port for tor proxy server. Default is 9050
-@property (nonatomic, readonly, getter = isRunning) BOOL isRunning;                  //<< Flag informing that the server is currently running
-@property (nonatomic, copy) NSURL *dataDirectoryURL;                                 //<< Where the tor data should be kept
+/** Sets a port for tor proxy server. Default is 9050 */
+@property (nonatomic, assign) NSUInteger port;
+
+/** Flag informing that the server is currently running */
+@property (nonatomic, readonly) BOOL isRunning;
+
+/** Where the tor data should be kept */
+@property (nonatomic, copy) NSURL *dataDirectoryURL;
 
 /** Class method returning defult tor manager.
  *
@@ -38,10 +40,16 @@ extern NSString * const kOnionKitStoppedNotification; //<< Notification informin
 /** Stops tor proxy server */
 - (void)stop;
 
-+(NSString *) opensslVersion;
+/** Returns OpenSSL version */
++ (NSString *) opensslVersion;
+/** Returns libevent version */
++ (NSString *) libeventVersion;
+/** Returns Tor version */
++ (NSString *) torVersion;
 
-+(NSString *) libeventVersion;
-
-+(NSString *) torVersion;
+/** Notification informing that the tor manager has started */
+extern NSString * const kOnionKitStartedNotification;
+/** Notification informing that the tor manager has stopped */
+extern NSString * const kOnionKitStoppedNotification;
 
 @end
