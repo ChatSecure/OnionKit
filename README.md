@@ -11,6 +11,12 @@ To clone:
    
 This will clone all of the required dependencies into the Submodules directory.
 
+### Dependency Versions
+
+* [OpenSSL](https://www.openssl.org) v1.0.1i - 06-Aug-2014
+* [libevent](http://libevent.org) v2.0.21-stable - 2012-11-18
+* [Tor](https://www.torproject.org) v0.2.4.21 - Mar 1 2014
+
 ## Build
 
 Build OpenSSL, libevent and libtor static libaries for iOS.
@@ -22,6 +28,8 @@ Build OpenSSL, libevent and libtor static libaries for iOS.
 ## Usage
 
 Although I haven't submitted the podspec yet, you can try to use `OnionKit.podspec` in the meantime.
+
+    pod 'OnionKit', :git => 'https://github.com/ChatSecure/OnionKit.git'
 
 ## License
 

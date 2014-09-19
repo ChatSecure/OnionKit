@@ -24,8 +24,8 @@
 #
 VERSION="0.2.4.21"
 TOR_GIT_TAG="tor-${VERSION}-chatsecure"
-SDKVERSION="7.1"
-MINIOSVERSION="6.0"
+SDKVERSION=`xcrun --sdk iphoneos --show-sdk-version 2> /dev/null`
+MINIOSVERSION="7.0"
 
 ###########################################################################
 #
@@ -129,7 +129,7 @@ do
         EXTRA_CONFIG=""
     else
         PLATFORM="iPhoneOS"
-        EXTRA_CONFIG="--host=arm-apple-darwin13 --target=arm-apple-darwin13 --disable-gcc-hardening --disable-linker-hardening"
+        EXTRA_CONFIG="--host=arm-apple-darwin --target=arm-apple-darwin"
     fi
 
     mkdir -p "${INTERDIR}/${PLATFORM}${SDKVERSION}-${ARCH}.sdk"
@@ -137,7 +137,7 @@ do
     mkdir -p "${INTERDIR}/${PLATFORM}${SDKVERSION}-${ARCH}.sdk/lib"
 
     export PATH="${DEVELOPER}/Toolchains/XcodeDefault.xct‌​oolchain/usr/bin:${DEVELOPER}/usr/bin:${ORIGINALPATH}"
-	export CC="${CCACHE}`which gcc` -arch ${ARCH} -miphoneos-version-min=${MINIOSVERSION}"
+	export CC="${CCACHE}`which clang` -arch ${ARCH} -miphoneos-version-min=${MINIOSVERSION}"
 
     # (since we're editing configure, make sure to start with an modified
     # copy when building a new arch)
@@ -150,19 +150,21 @@ do
 		sed -ie "s/tor_cv_can_use_curve25519_donna_c64=yes/tor_cv_can_use_curve25519_donna_c64=no/g" "${SRCDIR}/tor-${VERSION}/configure"
 	fi
 
+    EXTRA_CFLAGS="-fPIE -I${OUTPUTDIR}/include -isysroot ${DEVELOPER}/Platforms/${PLATFORM}.platform/Developer/SDKs/${PLATFORM}${SDKVERSION}.sdk"
+
     ./configure ${EXTRA_CONFIG} \
     --prefix="${INTERDIR}/${PLATFORM}${SDKVERSION}-${ARCH}.sdk" \
     --enable-static-openssl --enable-static-libevent --enable-static-zlib \
     --with-openssl-dir="${OUTPUTDIR}" \
     --with-libevent-dir="${OUTPUTDIR}" \
     --with-zlib-dir="${OUTPUTDIR}" \
-    --disable-asciidoc --disable-transparent --disable-threads \
+    --disable-asciidoc --disable-transparent \
     LDFLAGS="$LDFLAGS -L${OUTPUTDIR}/lib" \
-    CFLAGS="$CFLAGS -O2 -I${OUTPUTDIR}/include -isysroot ${DEVELOPER}/Platforms/${PLATFORM}.platform/Developer/SDKs/${PLATFORM}${SDKVERSION}.sdk" \
-    CPPFLAGS="$CPPFLAGS -I${OUTPUTDIR}/include -isysroot ${DEVELOPER}/Platforms/${PLATFORM}.platform/Developer/SDKs/${PLATFORM}${SDKVERSION}.sdk" 
+    CFLAGS="$CFLAGS ${EXTRA_CFLAGS}" \
+    CPPFLAGS="$CPPFLAGS ${EXTRA_CFLAGS}" 
 
     # Build the application
-    make -j4
+    make
 
     # Don't make install. We actually don't want the tor binary or the
     # documentation, we just want the archives of the compiled sources.

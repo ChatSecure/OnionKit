@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
     bash build-all.sh
   CMD
 
-  s.platform     = :ios, "6.0"
+  s.platform     = :ios, "7.0"
   s.source_files = "OnionKit/*.{h,m}", "dependencies/include/**/*.h"
   s.xcconfig = { 'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/Headers/OnionKit"'}
   s.preserve_paths = "dependencies/include/**/*.h"

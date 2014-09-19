@@ -23,8 +23,8 @@
 #  Choose your libevent version and your currently-installed iOS SDK version:
 #
 VERSION="2.0.21-stable"
-SDKVERSION="7.1"
-MINIOSVERSION="6.0"
+SDKVERSION=`xcrun --sdk iphoneos --show-sdk-version 2> /dev/null`
+MINIOSVERSION="7.0"
 VERIFYGPG=true
 
 ###########################################################################
@@ -120,24 +120,26 @@ do
 		EXTRA_CONFIG=""
 	else
 		PLATFORM="iPhoneOS"
-		EXTRA_CONFIG="--host=arm-apple-darwin11"
+		EXTRA_CONFIG="--host=arm-apple-darwin"
 	fi
 
 	mkdir -p "${INTERDIR}/${PLATFORM}${SDKVERSION}-${ARCH}.sdk"
 
 	export PATH="${DEVELOPER}/Toolchains/XcodeDefault.xct‌​oolchain/usr/bin:${DEVELOPER}/usr/bin:${ORIGINALPATH}"
-	export CC="${CCACHE}`which gcc` -arch ${ARCH} -miphoneos-version-min=${MINIOSVERSION}"
+	export CC="${CCACHE}`which clang` -arch ${ARCH} -miphoneos-version-min=${MINIOSVERSION}"
+
+	EXTRA_CFLAGS="-fPIE -I${OUTPUTDIR}/include -isysroot ${DEVELOPER}/Platforms/${PLATFORM}.platform/Developer/SDKs/${PLATFORM}${SDKVERSION}.sdk"
 
 	./configure --disable-shared --enable-static --disable-debug-mode ${EXTRA_CONFIG} \
     --prefix="${INTERDIR}/${PLATFORM}${SDKVERSION}-${ARCH}.sdk" \
-    LDFLAGS="$LDFLAGS -L${OUTPUTDIR}/lib" \
-    CFLAGS="$CFLAGS -O2 -I${OUTPUTDIR}/include -isysroot ${DEVELOPER}/Platforms/${PLATFORM}.platform/Developer/SDKs/${PLATFORM}${SDKVERSION}.sdk" \
-    CPPFLAGS="$CPPFLAGS -I${OUTPUTDIR}/include -isysroot ${DEVELOPER}/Platforms/${PLATFORM}.platform/Developer/SDKs/${PLATFORM}${SDKVERSION}.sdk"
+    LDFLAGS="$LDFLAGS -fPIE -L${OUTPUTDIR}/lib" \
+    CFLAGS="$CFLAGS ${EXTRA_CFLAGS}" \
+    CPPFLAGS="$CPPFLAGS ${EXTRA_CFLAGS}"
 
     # Build the application and install it to the fake SDK intermediary dir
     # we have set up. Make sure to clean up afterward because we will re-use
     # this source tree to cross-compile other targets.
-	make -j4
+	make
 	make install
 	make clean
 done
