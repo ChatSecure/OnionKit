@@ -1,35 +1,9 @@
 # [OnionKit](https://github.com/chatsecure/onionkit)
 [![Build Status](https://travis-ci.org/ChatSecure/OnionKit.svg)](https://travis-ci.org/ChatSecure/OnionKit)
 
-Objective-C Tor Wrapper Framework for iOS. **Don't actually use this yet.** This project is based on [iOS-OnionBrowser](https://github.com/mtigas/iOS-OnionBrowser) and [Tor.framework](https://github.com/hivewallet/Tor.framework).
+For low level Tor support on iOS (and a thin Objective-C wrapper), check out [CPAProxy](https://github.com/ursachec/CPAProxy) instead. We have directed our efforts toward improving CPAProxy instead of maintaining OnionKit in its current form. 
 
-To clone:
-
-    $ git clone git://github.com/ChatSecure/OnionKit.git
-    $ cd OnionKit        
-    $ git submodule update --init --recursive
-   
-This will clone all of the required dependencies into the Submodules directory.
-
-### Dependency Versions
-
-* [OpenSSL](https://www.openssl.org) v1.0.1i - 06-Aug-2014
-* [libevent](http://libevent.org) v2.0.21-stable - 2012-11-18
-* [Tor](https://www.torproject.org) v0.2.4.21 - Mar 1 2014
-
-## Build
-
-Build OpenSSL, libevent and libtor static libaries for iOS.
-
-    $ bash build-libssl.sh
-    $ bash build-libevent.sh
-    $ bash build-libtor.sh
-
-## Usage
-
-Although I haven't submitted the podspec yet, you can try to use `OnionKit.podspec` in the meantime.
-
-    pod 'OnionKit', :git => 'https://github.com/ChatSecure/OnionKit.git'
+We eventually plan to add higher-level UI features like a hardened WKWebView and bridge editor to OnionKit, with a dependency on CPAProxy.
 
 ## License
 

@@ -7,4 +7,4 @@ install:
   - pod install
 
 script:
-  - xctool -workspace OnionKit.xcworkspace -scheme OnionKitTestsiOS -sdk iphonesimulator7.1 -arch i386 test
+  - xctool -workspace OnionKit.xcworkspace -scheme OnionKitTestsiOS -sdk iphonesimulator8.0 -arch i386 test
